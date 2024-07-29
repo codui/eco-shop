@@ -6,3 +6,4 @@ package-lock.json
 *.ods
 *.ods#
 README.md
+./info-about-project
