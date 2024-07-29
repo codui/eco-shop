@@ -1,0 +1,8 @@
+/node_modules
+/dist
+package-lock.json
+*.odt
+*.odt#
+*.ods
+*.ods#
+README.md

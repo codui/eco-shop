@@ -1,0 +1,24 @@
+body {
+    display: grid;
+
+    p {
+        width: fit-content;
+        animation: slidein linear 1s infinite alternate none;
+        background-color: grey;
+        color: rgb(125, 43, 226);
+    }
+}
+
+::placeholder {
+    color: orange;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(50px);
+    }
+}
