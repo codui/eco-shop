@@ -1,6 +1,6 @@
 body {
-    background-color: $main-gray;
-    color: #333;
+    background-color: $main-gray-1;
+    color: $main-black;
     @include fontFam($font-regular);
     font-size: rems($root-font-size);
     line-height: rems(24);
