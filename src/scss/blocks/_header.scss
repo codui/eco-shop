@@ -130,32 +130,6 @@
     background-position: 20px center;
 }
 
-.order-form__button {
-    border: 0;
-    border-radius: rems(4);
-    background: $main-yellow;
-    color: $main-black;
-    cursor: pointer;
-    display: block;
-    @include fontFam($font-bold);
-    font-size: rems(22);
-    line-height: rems(80);
-    letter-spacing: rems(2);
-    margin: 0 auto;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: rems(400);
-    &:hover {
-        box-shadow: 0 0 rems(15) rgba(0, 0, 0, 0.3);
-        color: $main-white;
-    }
-    &:active {
-        box-shadow: none;
-        color: $main-black;
-    }
-}
-
 .clarifying-info {
     padding: rems(20) 0 rems(60);
     text-align: center;

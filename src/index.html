@@ -36,16 +36,18 @@
             </ul>
             <!-- ! Need JS for count days -->
             <div class="offer-term">
-                <p class="offer-term__text">Пропозиця дійсна з <span>26.07.2024</span> по 
+                <p class="offer-term__text">Пропозиця дійсна з <span>26.07.2024</span> по
                     <span>29.07.2024</span>
                 </p>
             </div>
             <form class="order-form" action="#" method="POST">
-                <input id="buyer-name" class="field order-form__input-name" type="text" name = "buyerName" placeholder="Введіть ім'я">
+                <input id="buyer-name" class="field order-form__input-name" type="text" name="buyerName"
+                    placeholder="Введіть ім'я">
 
-                <input id="buyer-phone" class="field order-form__input-phone" type="tel" name = "buyerPhone" placeholder="Введіть телефон">
+                <input id="buyer-phone" class="field order-form__input-phone" type="tel" name="buyerPhone"
+                    placeholder="Введіть телефон">
 
-                <button id="order-button" class="order-form__button" type="submit">ЗАМОВИТИ ЗІ ЗНИЖКОЮ</button>
+                <button id="order-button" class="order-form__button btn" type="submit">ЗАМОВИТИ ЗІ ЗНИЖКОЮ</button>
             </form>
             <div class="clarifying-info">
                 <p class="clarifying-info__text">
@@ -53,83 +55,105 @@
                 </p>
             </div>
         </header><!-- * HEADER END -->
-        
+
         <main><!-- * MAIN START -->
-            <img class="" src="./images/product-02.gif" alt="">
-            <h2>
-                Потужний подрібнювач із нержавіючої сталі легко впорається з будь-якими продуктами
-            </h2>
-            <img class="" src="./images/product-03.webp" alt="">
-            <p>
-                Це - <strong>якісна та практична машина, яка легко подрібнює та змішує</strong> всі види їжі: м'ясо, рибу,
-                овочі, супи, фруктові соки, лід, молочні коктейлі, сухе насіння, кондитерські вироби. Завдяки
-                <strong>потужному
-                    мотору (1300 Вт) та гострим лезам</strong> він за лічені секунди перемелелює всі види продуктів.
-            </p>
-            <a href="">
-                ЗАМОВИТИ ЗАРАЗ
-            </a>
-            <strong>ЧОМУ ВАРТО КУПУВАТИ САМЕ У НАС?</strong>
-            <img class="" src="./images/country.jpg" alt="">
-            <h4>Німецька якість</h4>
-            <p>
-                Ми замовляємо товари тільки у перевіреного німецького постачальника, тому гарантуємо високу якість виробу
-            </p>
-            <h2>ПЕРЕВАГИ</h2>
-            <div>
-                <img class="" src="./images/product-04.jpg" alt="">
-                <h4>Велика місткість</h4>
-                <p>Місткість 2 л. дає можливість подрібнити велику кількість продуктів.</p>
-            </div>
-            <div>
-                <img class="" src="./images/product-05.jpg" alt="">
-                <h4>Універсальність</h4>
-                <p>Подрібнювач здатен замінити одразу декілька приладів: м'ясорубку, кавомолку, овочерізку, шейкер, блендер!
-                </p>
-            </div>
-    
-            <div>
-                <img class="" src="./images/product-06.jpg" alt="">
-                <h4>Висока потужність</h4>
-                <p>За декілька секунд подрібнювач перемелює майже всі види продуктів!</p>
-            </div>
-            <div>
-                <img class="" src="./images/product-07.png" alt="">
-                <h4>Чистота</h4>
-                <p>Зручна конструкція легко розбирається та просто миється.</p>
-            </div>
-            <h2>
-                Подрібнюйте та змішуйте будь-які продукти за лічені секунди!
-            </h2>
-            <img class="" src="./images/product-08.webp" alt="">
-            <img class="" src="./images/product-09.webp" alt="">
-            <img class="" src="./images/product-10.webp" alt="">
-            <h4>ХАРАКТЕРИСТИКИ</h4>
-            <p>
-                Матеріал: нержавіюча сталь<br>
-                Чаша: загартоване скло<br>
-                Потужність: 1300 (Вт)<br>
-                Об'єм чаші: 2 л.<br>
-                Продуктивність: 1 кг / хв
-            </p>
-            <a href="">
-                ЗАМОВИТИ ЗАРАЗ
-            </a>
-            <h2>Відгуки покупців</h2>
-            <div class="slider">
-                <img class="" src="./images/slider/slider-1.jpg" alt="">
-                <p>Добрий день, хочу залишити відгук. Річ досить якісна, матеріал дійсно нержавіюча сталь, подрібнює всі
-                    продукти швидко, єдине що доставка була 5 днів.</p>
-                <img class="" src="./images/slider/slider-2.jpg" alt="">
-                <p>Вітаю! Користуюся подрібнювачем вже 2 місяці, подрібнює дуже добре і якісно, я не очікувала що за таку
-                    ціну я
-                    отримаю настільки хороший апарат.</p>
-                <img class="" src="./images/slider/slider-3.jpg" alt="">
-                <p>Купувала як подарунок, родичі були задоволені, дякую вам за таку річ, ціна дуже приємна тому незабаром
-                    візьму
-                    і собі</p>
-            </div>
-    
+            <section class="description">
+                <!-- * DESCRIPTION START -->
+                <img class="advertising" src="./images/product-02.gif" alt="advertising rpoduct">
+                <div class="card-offer">
+                    <h2 class="description-title">
+                        Потужний подрібнювач із нержавіючої сталі легко впорається з будь-якими продуктами
+                    </h2>
+                    <img class="" src="./images/product-03.webp" alt="">
+                    <p class="card-offer__text">
+                        Це - <strong>якісна та практична машина, яка легко подрібнює та змішує</strong> всі види їжі:
+                        м'ясо, рибу,
+                        овочі, супи, фруктові соки, лід, молочні коктейлі, сухе насіння, кондитерські вироби. Завдяки
+                        <strong>потужному
+                            мотору (1300 Вт) та гострим лезам</strong> він за лічені секунди перемелелює всі види
+                        продуктів.
+                    </p>
+                    <a class="card-offer__link btn" href="#">
+                        ЗАМОВИТИ ЗАРАЗ
+                    </a>
+                </div>
+
+                <!-- * BENEFITS START -->
+                <section class="benefits">
+                    <strong>ЧОМУ ВАРТО КУПУВАТИ САМЕ У НАС?</strong>
+                    <img class="" src="./images/country.jpg" alt="">
+                    <h4>Німецька якість</h4>
+                    <p>
+                        Ми замовляємо товари тільки у перевіреного німецького постачальника, тому гарантуємо високу
+                        якість виробу
+                    </p>
+                    <h2>ПЕРЕВАГИ</h2>
+                    <div>
+                        <img class="" src="./images/product-04.jpg" alt="">
+                        <h4>Велика місткість</h4>
+                        <p>Місткість 2 л. дає можливість подрібнити велику кількість продуктів.</p>
+                    </div>
+                    <div>
+                        <img class="" src="./images/product-05.jpg" alt="">
+                        <h4>Універсальність</h4>
+                        <p>Подрібнювач здатен замінити одразу декілька приладів: м'ясорубку, кавомолку, овочерізку,
+                            шейкер, блендер!
+                        </p>
+                    </div>
+
+                    <div>
+                        <img class="" src="./images/product-06.jpg" alt="">
+                        <h4>Висока потужність</h4>
+                        <p>За декілька секунд подрібнювач перемелює майже всі види продуктів!</p>
+                    </div>
+                    <div>
+                        <img class="" src="./images/product-07.png" alt="">
+                        <h4>Чистота</h4>
+                        <p>Зручна конструкція легко розбирається та просто миється.</p>
+                    </div>
+
+                    <h2>
+                        Подрібнюйте та змішуйте будь-які продукти за лічені секунди!
+                    </h2>
+                    <img class="" src="./images/product-08.webp" alt="">
+                    <img class="" src="./images/product-09.webp" alt="">
+                    <img class="" src="./images/product-10.webp" alt="">
+                    <h4>ХАРАКТЕРИСТИКИ</h4>
+                    <p>
+                        Матеріал: нержавіюча сталь<br>
+                        Чаша: загартоване скло<br>
+                        Потужність: 1300 (Вт)<br>
+                        Об'єм чаші: 2 л.<br>
+                        Продуктивність: 1 кг / хв
+                    </p>
+                    <a href="">
+                        ЗАМОВИТИ ЗАРАЗ
+                    </a>
+                </section>
+                <!-- * BENEFITS END -->
+            </section>
+            <!-- * DESCRIPTION END -->
+
+            <section class="customer-reviews slider">
+                <h2>Відгуки покупців</h2>
+                <div class="slider">
+                    <img class="" src="./images/slider/slider-1.jpg" alt="">
+                    <p>Добрий день, хочу залишити відгук. Річ досить якісна, матеріал дійсно нержавіюча сталь, подрібнює
+                        всі
+                        продукти швидко, єдине що доставка була 5 днів.</p>
+                    <img class="" src="./images/slider/slider-2.jpg" alt="">
+                    <p>Вітаю! Користуюся подрібнювачем вже 2 місяці, подрібнює дуже добре і якісно, я не очікувала що за
+                        таку
+                        ціну я
+                        отримаю настільки хороший апарат.</p>
+                    <img class="" src="./images/slider/slider-3.jpg" alt="">
+                    <p>Купувала як подарунок, родичі були задоволені, дякую вам за таку річ, ціна дуже приємна тому
+                        незабаром
+                        візьму
+                        і собі</p>
+                </div>
+            </section>
+
             <section class="delivery-payment">
                 <div class="delivery">
                     <div>
@@ -160,7 +184,7 @@
                 </div>
             </section>
         </main><!-- * MAIN END -->
-        
+
         <footer><!-- * FOOTER START -->
             <h2>
                 ПОРТАТИВНИЙ КУХОННИЙ ПОДРІБНЮВАЧ
