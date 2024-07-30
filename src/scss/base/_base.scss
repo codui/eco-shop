@@ -1,0 +1,19 @@
+body {
+    background-color: $main-gray;
+    color: #333;
+    @include fontFam($font-regular);
+    font-size: rems($root-font-size);
+    line-height: rems(24);
+}
+
+.container {
+    background-color: $main-white;
+    max-width: 100%;
+    margin: 0 auto;
+    width: rems($content-width);
+}
+
+img {
+    max-width: 100%;
+	height: auto;
+}

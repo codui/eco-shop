@@ -1,24 +1,11 @@
-body {
-    display: grid;
+@use "sass:math";
 
-    p {
-        width: fit-content;
-        animation: slidein linear 1s infinite alternate none;
-        background-color: grey;
-        color: rgb(125, 43, 226);
-    }
-}
+@import "./base/_reset";
+@import "./base/_variables";
+@import "./base/_fonts";
+@import "./base/_mixins";
+@import "./base/_functions";
+@import "./base/_base";
 
-::placeholder {
-    color: orange;
-}
 
-@keyframes slidein {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(50px);
-    }
-}
+@import "./blocks/_header";

@@ -1,0 +1,87 @@
+.header-title {
+    @include fontFam($font-bold);
+    text-transform: uppercase;
+    text-align: center;
+
+    &__text {
+        font-size: rems(29);
+        line-height: rems(40);
+        padding: rems(12) 0;
+    }
+
+    &__name-prod {
+        background-color: $blue-light;
+        color: $main-white;
+        font-size: rems(28);
+        letter-spacing: rems(1);
+        margin: 0;
+        padding: rems(10) 0;
+    }
+}
+// ---- HEADER PRICE START ----
+.header-price {
+    background: url("../images/offer__price_bg.png") center no-repeat;
+    display: flex;
+    justify-content: space-around;
+    margin: -16px 0 40px;
+    min-height: rems(126);
+    padding: rems(20) 0 rems(15) 0;
+    position: relative;
+
+    &__item {
+        align-items: center;
+        display: flex;
+        flex-basis: 30%;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: rems(5);
+    }
+}
+
+.regular-price,
+.today-price {
+    color: $main-black;
+
+    &__text {
+        font-size: rems(14);
+        line-height: rems(14);
+        text-transform: uppercase;
+    }
+}
+
+.regular-price__value,
+.today-price__value {
+    font-size: rems(34);
+    line-height: rems(34);
+}
+
+.regular-price__value {
+    text-decoration: line-through;
+}
+
+.today-price__value {
+    @include fontFam(700);
+}
+.discount {
+    color: $main-white;
+    @include fontFam(700);
+    &__text {
+        font-size: rems(24);
+        letter-spacing: rems(2);
+        line-height: rems(24);
+    }
+    &__value {
+        font-size: rems(40);
+        line-height: rems(40);
+    }
+}
+// ---- HEADER PRICE END ----
+.offer-term {
+    background-color: $yellow-offer-term;
+    border-radius: rems(10);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: $main-black;
+    font-size: rems(24);
+    @include fontFam(700);
+    padding: rems(20);
+}

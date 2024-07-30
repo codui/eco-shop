@@ -1,0 +1,5 @@
+// Mixin for inserting a font in code
+@mixin fontFam($weight: 400, $ser: sans-serif) {
+    font-family: 'AvenirNext', $ser;
+    font-weight: $weight;
+}
