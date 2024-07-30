@@ -31,7 +31,10 @@ aside {
 }
 
 html {
-	-webkit-font-smoothing: subpixel-antialiased !important;
+	-ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
 html,
@@ -42,9 +45,6 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
 }
 
 

@@ -4,6 +4,7 @@ body {
     @include fontFam($font-regular);
     font-size: rems($root-font-size);
     line-height: rems(24);
+    cursor: default;
 }
 
 .container {
@@ -22,6 +23,7 @@ img {
     border: 0;
     border-radius: rems(4);
     background: $main-yellow;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     color: $main-black;
     cursor: pointer;
     display: block;
@@ -34,10 +36,11 @@ img {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    transition: box-shadow 0.3s, color 0.5s;
     width: 100%;
     &:hover {
         box-shadow: 0 0 rems(15) rgba(0, 0, 0, 0.3);
-        color: $main-white;
+        color: $blue-light;
     }
     &:active {
         box-shadow: none;

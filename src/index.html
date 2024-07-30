@@ -14,32 +14,79 @@
     <div class="container">
         <header class="header"><!-- * HEADER START  -->
             <div class="header-title">
-                <h2 class="header-title__text">ЗРОБЛЕНО В НІМЕЧЧИНІ</h2>
-                <h1 class="header-title__name-prod">«RAINBERG 1300W»</h1>
+                <h1 class="header-title__text">Капсули для пральної машинки (4шт.)</h1>
             </div>
+            <!-- TIMER-BLOCK START -->
+            <div class="timer-block">
+                <p class="timer-block__text">Ця пропозиція закінчиться через:</p>
+                <div class="timer">
+                    <div class="timer__item">
+                        <div class="text">днів</div>
+                        <div class="count">00</div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="text">годин</div>
+                        <div class="count hours">
+                            <span>0</span><span>5</span>
+                        </div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="text">хвилин</div>
+                        <div class="count minutes"><span>2</span><span>4</span></div>
+                    </div>
+                    <div class="timer__item">
+                        <div class="text">секунд</div>
+                        <div class="count seconds"><span>4</span><span>4</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- TIMER-BLOCK END -->
+
             <div class="header-image">
-                <img class="image-prod-1" src="./images/product-01.jpg" alt="">
+                <img class="image-prod-1" src="./images/product-01.jpg" alt="capsules for a washing machine">
             </div>
-            <ul class="header-price">
-                <li class="regular-price header-price__item">
-                    <span class="regular-price__text">ЗВИЧАЙНА ЦІНА</span>
-                    <span class="regular-price__value">1199 грн</span>
+
+            <ul class="benefits-text">
+                <li class="benefits-text__item">
+                    <span>100% гарантія якості</span>
                 </li>
-                <li class="discount header-price__item">
-                    <span class="discount__text">знижка</span>
-                    <span class="discount__value">-30%</span>
+                <li class="benefits-text__item">
+                    <span>Обмежена пропозиція</span>
                 </li>
-                <li class="today-price header-price__item">
-                    <span class="today-price__text">ЦІНА СЬОГОДНІ</span>
-                    <span class="today-price__value">650 грн</span>
+                <li class="benefits-text__item">
+                    <span>Оплата при отриманні</span>
                 </li>
             </ul>
-            <!-- ! Need JS for count days -->
-            <div class="offer-term">
-                <p class="offer-term__text">Пропозиця дійсна з <span>26.07.2024</span> по
-                    <span>29.07.2024</span>
+
+            <div class="price-block">
+                <p class="price__item old-price">
+                    <span class="text">Звичайна ціна</span>
+                    <span class="value">242 грн</span>
+                </p>
+                <p class="price__item new-price">
+                    <span class="text">Ви заощаджуєте 38%</span>
+                    <span class="value">150 грн</span>
                 </p>
             </div>
+            <ul class="list-advantages">
+                <li class="list-advantages__item">Швидкий результат</li>
+                <li class="list-advantages__item">Працює з усіма типами пральних машин</li>
+                <li class="list-advantages__item">Очищає всього за 20 хвилин</li>
+            </ul>
+            <a class="card-offer__link btn" href="#">
+                ЗАМОВИТИ ЗАРАЗ
+            </a>
+            <div class="products-count">
+                * залишилось <b>10</b> штук по акції
+            </div>
+
+
+
+
+
+
+
+        
             <form class="order-form" action="#" method="POST">
                 <input id="buyer-name" class="field order-form__input-name" type="text" name="buyerName"
                     placeholder="Введіть ім'я">
@@ -57,8 +104,8 @@
         </header><!-- * HEADER END -->
 
         <main><!-- * MAIN START -->
+            <!-- * DESCRIPTION START -->
             <section class="description">
-                <!-- * DESCRIPTION START -->
                 <img class="advertising" src="./images/product-02.gif" alt="advertising rpoduct">
                 <div class="card-offer">
                     <h2 class="description-title">
@@ -73,27 +120,29 @@
                             мотору (1300 Вт) та гострим лезам</strong> він за лічені секунди перемелелює всі види
                         продуктів.
                     </p>
-                    <a class="card-offer__link btn" href="#">
-                        ЗАМОВИТИ ЗАРАЗ
-                    </a>
                 </div>
 
-                <!-- * BENEFITS START -->
-                <section class="benefits">
-                    <strong>ЧОМУ ВАРТО КУПУВАТИ САМЕ У НАС?</strong>
-                    <img class="" src="./images/country.jpg" alt="">
-                    <h4>Німецька якість</h4>
-                    <p>
-                        Ми замовляємо товари тільки у перевіреного німецького постачальника, тому гарантуємо високу
-                        якість виробу
-                    </p>
+                <!-- * DESCRIPTION__BENEFITS-DARK START -->
+                <section class="description__benefits-dark">
+                    <h2>ЧОМУ ВАРТО КУПУВАТИ САМЕ У НАС?</h2>
+
+                    <div class="benefits__item">
+                        <img class="" src="./images/country.jpg" alt="">
+                        <h4>Німецька якість</h4>
+                        <p>
+                            Ми замовляємо товари тільки у перевіреного німецького постачальника, тому гарантуємо високу
+                            якість виробу
+                        </p>
+                    </div>
+
                     <h2>ПЕРЕВАГИ</h2>
-                    <div>
+                    <div class="benefits__item">
                         <img class="" src="./images/product-04.jpg" alt="">
                         <h4>Велика місткість</h4>
                         <p>Місткість 2 л. дає можливість подрібнити велику кількість продуктів.</p>
                     </div>
-                    <div>
+
+                    <div class="benefits__item">
                         <img class="" src="./images/product-05.jpg" alt="">
                         <h4>Універсальність</h4>
                         <p>Подрібнювач здатен замінити одразу декілька приладів: м'ясорубку, кавомолку, овочерізку,
@@ -101,17 +150,22 @@
                         </p>
                     </div>
 
-                    <div>
+                    <div class="benefits__item">
                         <img class="" src="./images/product-06.jpg" alt="">
                         <h4>Висока потужність</h4>
                         <p>За декілька секунд подрібнювач перемелює майже всі види продуктів!</p>
                     </div>
-                    <div>
+
+                    <div class="benefits__item">
                         <img class="" src="./images/product-07.png" alt="">
                         <h4>Чистота</h4>
                         <p>Зручна конструкція легко розбирається та просто миється.</p>
                     </div>
+                </section>
+                <!-- * DESCRIPTION__BENEFITS-DARK END -->
 
+                <!-- * DESCRIPTION__BENEFITS-WHITE START -->
+                <section class="description__benefits-white">
                     <h2>
                         Подрібнюйте та змішуйте будь-які продукти за лічені секунди!
                     </h2>
@@ -130,7 +184,8 @@
                         ЗАМОВИТИ ЗАРАЗ
                     </a>
                 </section>
-                <!-- * BENEFITS END -->
+                <!-- * DESCRIPTION__BENEFITS-WHITE END -->
+
             </section>
             <!-- * DESCRIPTION END -->
 

@@ -1,6 +1,6 @@
 /* - - - FONTS START - - - */
 @font-face {
-    font-family: "AvenirNext";
+    font-family: "AvenirNextCyr";
     // Указываем путь относительно основного файла .css к файлу шрифта.
     src: url("../#{$font-path}/#{$font-avenir-regular}.ttf") format("ttf"),
         url("../#{$font-path}/#{$font-avenir-regular}.woff") format("woff"),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: "AvenirNext";
+    font-family: "AvenirNextCyr";
     // Указываем путь относительно основного файла .css к файлу шрифта.
     src: url("../#{$font-path}/#{$font-avenir-bold}.ttf") format("ttf"),
         url("../#{$font-path}/#{$font-avenir-bold}.woff") format("woff"),
