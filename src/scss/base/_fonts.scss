@@ -20,4 +20,15 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "ArialBold";
+    // Указываем путь относительно основного файла .css к файлу шрифта.
+    src: url("../#{$font-path}/#{$font-arial-bold}.ttf") format("ttf"),
+        url("../#{$font-path}/#{$font-arial-bold}.woff") format("woff"),
+        url("../#{$font-path}/#{$font-arial-bold}.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 /* - - - FONTS END - - */

@@ -1,0 +1,20 @@
+/*--- BUYER-PREPARATION START ---*/
+.buyer-preparation {
+    margin: rems(30) 0 0 0;
+
+    &__text {
+        font-size: rems(16);
+        text-align: center;
+        padding: rems(10) 0;
+    }
+}
+
+.title {
+    @include fontFam($font-bold, $font-arial);
+    font-size: rems(30);
+    line-height: rems(36);
+    margin-bottom: rems(30);
+    padding: 0 rems(10);
+    text-align: center;
+}
+/*--- BUYER-PREPARATION END ---*/

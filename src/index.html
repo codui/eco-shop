@@ -12,9 +12,9 @@
 
 <body>
     <div class="container">
-        <header class="header"><!-- * HEADER START  -->
-            <div class="header-title">
-                <h1 class="header-title__text">Капсули для пральної машинки (4шт.)</h1>
+        <section class="offer"><!-- * OFFER START  -->
+            <div class="offer-title">
+                <h1 class="offer-title__text">Капсули для пральної машинки (4шт.)</h1>
             </div>
             <!-- TIMER-BLOCK START -->
             <div class="timer-block">
@@ -42,10 +42,10 @@
             </div>
             <!-- TIMER-BLOCK END -->
 
-            <div class="header-image">
-                <img class="image-prod-1" src="./images/product-01.jpg" alt="capsules for a washing machine">
+            <div class="offer-image">
+                <img class="offer-image-1" src="./images/product-01.jpg" alt="capsules for a washing machine">
             </div>
-
+            <!-- BENEFITS-TEXT START -->
             <ul class="benefits-text">
                 <li class="benefits-text__item">
                     <span>100% гарантія якості</span>
@@ -57,7 +57,9 @@
                     <span>Оплата при отриманні</span>
                 </li>
             </ul>
+            <!-- BENEFITS-TEXT END -->
 
+            <!-- PRICE-BLOCK START -->
             <div class="price-block">
                 <p class="price__item old-price">
                     <span class="text">Звичайна ціна</span>
@@ -68,146 +70,160 @@
                     <span class="value">150 грн</span>
                 </p>
             </div>
-            <ul class="list-advantages">
-                <li class="list-advantages__item">Швидкий результат</li>
-                <li class="list-advantages__item">Працює з усіма типами пральних машин</li>
-                <li class="list-advantages__item">Очищає всього за 20 хвилин</li>
+            <!-- PRICE-BLOCK END -->
+
+            <ul class="general-list">
+                <li class="general-list__item">Швидкий результат</li>
+                <li class="general-list__item">Працює з усіма типами пральних машин</li>
+                <li class="general-list__item">Очищає всього за 20 хвилин</li>
             </ul>
-            <a class="card-offer__link btn" href="#">
+            <a class="offer__link btn" href="#">
                 ЗАМОВИТИ ЗАРАЗ
             </a>
-            <div class="products-count">
-                * залишилось <b>10</b> штук по акції
+            <p class="products-count">
+                * залишилось <b>12</b> штук по акції
+            </p>
+        </section><!-- * OFFER END -->
+
+        <!-- * BUYER-PREPARATION START -->
+        <section class="buyer-preparation">
+            <h2 class="title">Ви колись замислювалися, наскільки брудна ваша пральна машина?</h2>
+            <img class="image-prod-2" src="./images/product-02.jpg" alt="washing machine">
+            <p class="buyer-preparation__text">Чи знаєте ви, що ваша пральна машина може бути найбруднішим місцем у
+                будинку? Залишки бруду та запаху від
+                попередніх прань можуть викликати зростання бактерій, що впливають на здоров'я сім'ї. Ці капсули для
+                пральної машини вбивають 99% вищезгаданих бактерій та інших патогенних мікроорганізмів за 20 хвилин.</p>
+            <img class="image-prod-2" src="./images/product-03.jpg" alt="washing capsules 1">
+            <p class="buyer-preparation__text">Ефективність викликана тим, що капсули глибоко проникають, розчиняючи та
+                видаляючи залишки бруду,
+                плісняви та бактерії, що позбавляє проблем з білизною в майбутньому. Попрощайтеся з мікробами на вашому
+                свіжовипраному одязі!</p>
+        </section>
+        <!-- * BUYER-PREPARATION END -->
+
+        <!-- * APPLICATION-METHOD START -->
+        <section class="application-method">
+            <h2 class="title">Спосіб застосування</h2>
+            <img class="image-prod-4" src="./images/product-04.gif" alt="application method part 1">
+            <ul class="general-list">
+                <li class="general-list__item">Помістіть одну антибактеріальну капсулу, що чистить, в пральну машину.
+                </li>
+                <li class="general-list__item">Виберіть програму, яка дозволяє прання з найвищою температурою (60-90
+                    градусів).</li>
+                <li class="general-list__item">Дочекайтесь поки прання закінчеться.</li>
+                <li class="general-list__item">Відкрийте дверцята пральної машинки для провітрювання на 15-20 хвилин.
+                </li>
+            </ul>
+            <img class="image-prod-5" src="./images/product-05.gif" alt="application method part 2">
+        </section>
+        <!-- * APPLICATION-METHOD END -->
+
+
+        <!-- * BENEFITS DARK START -->
+        <section class="benefits">
+            <h2 class="title">Переваги Антибактеріальних капсул для пральної машини</h2>
+
+            <div class="benefits-item">
+                <img class="image-prod" src="./images/product-06.jpg" alt="dilution ratio">
+                <div class="benefits-item__text">
+                    <h4 class="title-yellow">Високоефективність</h4>
+                    <p>
+                        Капсула глибоко проникає та розчиняє залишки, що викликають неприємний запах.
+                    </p>
+                </div>
             </div>
 
-
-
-
-
-
-
-        
-            <form class="order-form" action="#" method="POST">
-                <input id="buyer-name" class="field order-form__input-name" type="text" name="buyerName"
-                    placeholder="Введіть ім'я">
-
-                <input id="buyer-phone" class="field order-form__input-phone" type="tel" name="buyerPhone"
-                    placeholder="Введіть телефон">
-
-                <button id="order-button" class="order-form__button btn" type="submit">ЗАМОВИТИ ЗІ ЗНИЖКОЮ</button>
-            </form>
-            <div class="clarifying-info">
-                <p class="clarifying-info__text">
-                    * Оплата при отриманні та огляді
-                </p>
+            <div class="benefits-item benefits-item_reverse">
+                <img class="image-prod" src="./images/product-07.jpg" alt="washing capsules 2">
+                <div class="benefits-item__text benefits-item__text_reverse">
+                    <h4 class="title-yellow">Зручно у використанні</h4>
+                    <p>Для очищення потрібно 20 хвилин та мінімум зусиль.</p>
+                </div>
             </div>
-        </header><!-- * HEADER END -->
+
+            <div class="benefits-item">
+                <img class="image-prod" src="./images/product-08.jpg" alt="advantage">
+                <div class="benefits-item__text">
+                    <h4 class="title-yellow">Вигідність</h4>
+                    <p>1 капсула може повністю очистити і зберегти вашу пральну машину свіжою протягом двох місяців. У
+                        упаковці таких 12 шт.</p>
+                </div>
+            </div>
+
+        </section>
+        <!-- * BENEFITS DARK END -->
+
+
+        <!-- * DESCRIPTION-VIDEO START -->
+        <section class="description-video">
+            <h2 class="title title_blue">Як працюють антибактеріальні капсули?</h2>
+            <div class="wrap-video">
+                <!-- 
+                https://youtube.com/shorts/ghCdgdtrxBQ?si=3jbFagPW73P8fOjQ -->
+                <iframe width="480" height="536" src="https://www.youtube.com/embed/ghCdgdtrxBQ"
+                    title="Немецкие таблетки для очистки стиральной машины" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+        <!-- * DESCRIPTION-VIDEO START -->
+
+        <!-- * OFFER-BLUE START -->
+        <section class="offer-blue">
+            <h2 class="title title_white">Характеристики</h2>
+            <img class="image-prod-9" src="./images/product-09.jpg">
+            <ul class="general-list">
+                <li class="general-list__item">Склад: Surfactant, Bioenzymes and Sodium Bicarbonate.</li>
+                <li class="general-list__item">Розмір: 2,6 см 2,6 см 2,6 см.</li>
+                <li class="general-list__item">В упаковці 12 шт.</li>
+            </ul>
+            <a class="offer__link btn" href="#">
+                ЗАМОВИТИ ЗАРАЗ
+            </a>
+            <p class="products-count">
+                * залишилось <b>12</b> штук по акції
+            </p>
+            <img class="image-prod-10" src="./images/product-10.jpg">
+            <p class="offer-blue__text">Використовуйте ці чистячі капсули, щоб зберегти вашу пральну машину та білизну в
+                чистоті та без шкідливих мікроорганізмів!</p>
+        </section>
+        <!-- * OFFER-BLUE END -->
+
+
+
+
+        <!-- * CUSTOMER-REVIEWS START -->
+        <section class="customer-reviews">
+            <h2 class="title title_white">Відгуки покупців</h2>
+            <div class="slider">
+                <!-- <img class="" src="./images/slider/slider-1.jpg" alt="">
+                <p>Добрий день, хочу залишити відгук. Річ досить якісна, матеріал дійсно нержавіюча сталь, подрібнює
+                    всі
+                    продукти швидко, єдине що доставка була 5 днів.</p>
+                <img class="" src="./images/slider/slider-2.jpg" alt="">
+                <p>Вітаю! Користуюся подрібнювачем вже 2 місяці, подрібнює дуже добре і якісно, я не очікувала що за
+                    таку
+                    ціну я
+                    отримаю настільки хороший апарат.</p>
+                <img class="" src="./images/slider/slider-3.jpg" alt="">
+                <p>Купувала як подарунок, родичі були задоволені, дякую вам за таку річ, ціна дуже приємна тому
+                    незабаром
+                    візьму
+                    і собі</p> -->
+            </div>
+        </section>
+        <!-- * CUSTOMER-REVIEWS END -->
+
+
+
+
+
+
+
+
+
 
         <main><!-- * MAIN START -->
-            <!-- * DESCRIPTION START -->
-            <section class="description">
-                <img class="advertising" src="./images/product-02.gif" alt="advertising rpoduct">
-                <div class="card-offer">
-                    <h2 class="description-title">
-                        Потужний подрібнювач із нержавіючої сталі легко впорається з будь-якими продуктами
-                    </h2>
-                    <img class="" src="./images/product-03.webp" alt="">
-                    <p class="card-offer__text">
-                        Це - <strong>якісна та практична машина, яка легко подрібнює та змішує</strong> всі види їжі:
-                        м'ясо, рибу,
-                        овочі, супи, фруктові соки, лід, молочні коктейлі, сухе насіння, кондитерські вироби. Завдяки
-                        <strong>потужному
-                            мотору (1300 Вт) та гострим лезам</strong> він за лічені секунди перемелелює всі види
-                        продуктів.
-                    </p>
-                </div>
-
-                <!-- * DESCRIPTION__BENEFITS-DARK START -->
-                <section class="description__benefits-dark">
-                    <h2>ЧОМУ ВАРТО КУПУВАТИ САМЕ У НАС?</h2>
-
-                    <div class="benefits__item">
-                        <img class="" src="./images/country.jpg" alt="">
-                        <h4>Німецька якість</h4>
-                        <p>
-                            Ми замовляємо товари тільки у перевіреного німецького постачальника, тому гарантуємо високу
-                            якість виробу
-                        </p>
-                    </div>
-
-                    <h2>ПЕРЕВАГИ</h2>
-                    <div class="benefits__item">
-                        <img class="" src="./images/product-04.jpg" alt="">
-                        <h4>Велика місткість</h4>
-                        <p>Місткість 2 л. дає можливість подрібнити велику кількість продуктів.</p>
-                    </div>
-
-                    <div class="benefits__item">
-                        <img class="" src="./images/product-05.jpg" alt="">
-                        <h4>Універсальність</h4>
-                        <p>Подрібнювач здатен замінити одразу декілька приладів: м'ясорубку, кавомолку, овочерізку,
-                            шейкер, блендер!
-                        </p>
-                    </div>
-
-                    <div class="benefits__item">
-                        <img class="" src="./images/product-06.jpg" alt="">
-                        <h4>Висока потужність</h4>
-                        <p>За декілька секунд подрібнювач перемелює майже всі види продуктів!</p>
-                    </div>
-
-                    <div class="benefits__item">
-                        <img class="" src="./images/product-07.png" alt="">
-                        <h4>Чистота</h4>
-                        <p>Зручна конструкція легко розбирається та просто миється.</p>
-                    </div>
-                </section>
-                <!-- * DESCRIPTION__BENEFITS-DARK END -->
-
-                <!-- * DESCRIPTION__BENEFITS-WHITE START -->
-                <section class="description__benefits-white">
-                    <h2>
-                        Подрібнюйте та змішуйте будь-які продукти за лічені секунди!
-                    </h2>
-                    <img class="" src="./images/product-08.webp" alt="">
-                    <img class="" src="./images/product-09.webp" alt="">
-                    <img class="" src="./images/product-10.webp" alt="">
-                    <h4>ХАРАКТЕРИСТИКИ</h4>
-                    <p>
-                        Матеріал: нержавіюча сталь<br>
-                        Чаша: загартоване скло<br>
-                        Потужність: 1300 (Вт)<br>
-                        Об'єм чаші: 2 л.<br>
-                        Продуктивність: 1 кг / хв
-                    </p>
-                    <a href="">
-                        ЗАМОВИТИ ЗАРАЗ
-                    </a>
-                </section>
-                <!-- * DESCRIPTION__BENEFITS-WHITE END -->
-
-            </section>
-            <!-- * DESCRIPTION END -->
-
-            <section class="customer-reviews slider">
-                <h2>Відгуки покупців</h2>
-                <div class="slider">
-                    <img class="" src="./images/slider/slider-1.jpg" alt="">
-                    <p>Добрий день, хочу залишити відгук. Річ досить якісна, матеріал дійсно нержавіюча сталь, подрібнює
-                        всі
-                        продукти швидко, єдине що доставка була 5 днів.</p>
-                    <img class="" src="./images/slider/slider-2.jpg" alt="">
-                    <p>Вітаю! Користуюся подрібнювачем вже 2 місяці, подрібнює дуже добре і якісно, я не очікувала що за
-                        таку
-                        ціну я
-                        отримаю настільки хороший апарат.</p>
-                    <img class="" src="./images/slider/slider-3.jpg" alt="">
-                    <p>Купувала як подарунок, родичі були задоволені, дякую вам за таку річ, ціна дуже приємна тому
-                        незабаром
-                        візьму
-                        і собі</p>
-                </div>
-            </section>
 
             <section class="delivery-payment">
                 <div class="delivery">
@@ -241,30 +257,78 @@
         </main><!-- * MAIN END -->
 
         <footer><!-- * FOOTER START -->
-            <h2>
-                ПОРТАТИВНИЙ КУХОННИЙ ПОДРІБНЮВАЧ
-            </h2>
-            <p>НАЙКРАЩИЙ ПОМІЧНИК</p>
-            <img class="" src="./images/product-11.jpg" alt="">
-            <div class="price-block">
-                <span>ЗВИЧАЙНА ЦІНА</span>
-                1199 грн
-                знижка
-                -30%
-                ЦІНА СЬОГОДНІ
-                650 грн
-            </div>
-            <div class="timer">
-                <p>До кінця акції залишилося:</p>
-                <span>годин</span>
-                <span>хвилин</span>
-                <span>секунд</span>
-            </div>
-            <form action="" method="post">
-                <input type="text" placeholder="Введіть ім'я">
-                <input type="text" placeholder="Введіть телефон">
-                <button type="submit">ЗАМОВИТИ ЗІ ЗНИЖКОЮ</button>
-            </form>
+
+            <section class="offer"><!-- * OFFER START  -->
+                <div class="offer-title">
+                    <h1 class="offer-title__text">Капсули для пральної машинки (4шт.)</h1>
+                </div>
+                <!-- TIMER-BLOCK START -->
+                <div class="timer-block">
+                    <p class="timer-block__text">Ця пропозиція закінчиться через:</p>
+                    <div class="timer">
+                        <div class="timer__item">
+                            <div class="text">днів</div>
+                            <div class="count">00</div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="text">годин</div>
+                            <div class="count hours">
+                                <span>0</span><span>5</span>
+                            </div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="text">хвилин</div>
+                            <div class="count minutes"><span>2</span><span>4</span></div>
+                        </div>
+                        <div class="timer__item">
+                            <div class="text">секунд</div>
+                            <div class="count seconds"><span>4</span><span>4</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TIMER-BLOCK END -->
+
+                <div class="offer-image">
+                    <img class="offer-image-1" src="./images/product-01.jpg" alt="capsules for a washing machine">
+                </div>
+
+                <ul class="benefits-text">
+                    <li class="benefits-text__item">
+                        <span>100% гарантія якості</span>
+                    </li>
+                    <li class="benefits-text__item">
+                        <span>Обмежена пропозиція</span>
+                    </li>
+                    <li class="benefits-text__item">
+                        <span>Оплата при отриманні</span>
+                    </li>
+                </ul>
+
+                <div class="price-block">
+                    <p class="price__item old-price">
+                        <span class="text">Звичайна ціна</span>
+                        <span class="value">242 грн</span>
+                    </p>
+                    <p class="price__item new-price">
+                        <span class="text">Ви заощаджуєте 38%</span>
+                        <span class="value">150 грн</span>
+                    </p>
+                </div>
+
+                <form class="order-form" action="#" method="POST">
+                    <input id="buyer-name" class="field order-form__input-name" type="text" name="buyerName"
+                        placeholder="Введіть ім'я">
+
+                    <input id="buyer-phone" class="field order-form__input-phone" type="tel" name="buyerPhone"
+                        placeholder="Введіть телефон">
+
+                    <button id="order-button" class="order-form__button btn" type="submit">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+                </form>
+                <div class="products-count">
+                    * залишилось <b>12</b> штук по акції
+                </div>
+            </section><!-- * OFFER END -->
+
         </footer><!-- * FOOTER END -->
 
     </div>

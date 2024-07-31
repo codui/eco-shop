@@ -1,0 +1,41 @@
+/*--- BENEFITS START ---*/
+.benefits {
+    background-color: $main-black;
+    color: $main-white;
+    padding: rems(30) 0 rems(10);
+
+    &-item {
+        display: flex;
+        margin: 0 rems(20) rems(30);
+        max-width: rems(440);
+        width: 100%;
+        min-height: rems(150);
+        
+        &_reverse {
+            flex-flow: row-reverse;
+        }
+
+        &__text {
+            padding: 0 0 0 rems(20);
+
+            &_reverse {
+                padding: 0 rems(20) 0 0;
+                text-align: right;
+            }
+        }
+
+    }
+}
+
+.image-prod {
+    display: block;
+    border-radius: rems(4);
+    max-width: rems(150);
+}
+
+.title-yellow {
+    color: $main-yellow;
+    @include fontFam($font-bold, $font-arial);
+    margin: 0 0 rems(5);
+}
+/*--- BENEFITS END ---*/

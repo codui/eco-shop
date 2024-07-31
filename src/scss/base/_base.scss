@@ -27,8 +27,8 @@ img {
     color: $main-black;
     cursor: pointer;
     display: block;
-    @include fontFam($font-bold);
-    font-size: rems(22);
+    @include fontFam($font-bold, $font-arial);
+    font-size: rems(24);
     line-height: rems(80);
     letter-spacing: rems(2);
     margin: 0 auto;

@@ -1,18 +1,19 @@
-.header-title {
-    @include fontFam($font-bold);
+/* --- OFFER BLOCK START --- */
+.offer-title {
+    @include fontFam($font-bold, $font-arial);
     text-transform: uppercase;
     text-align: center;
 
     &__text {
         background-color: $blue-light;
         color: $main-white;
-        font-size: rems(29);
+        font-size: rems(32);
         line-height: rems(40);
         padding: rems(12) 0 rems(35);
     }
 }
 
-// --- TIMER-BLOCK START --- 
+/* --- TIMER-BLOCK START --- */
 .timer-block {
     display: flex;
     justify-content: space-between;
@@ -50,14 +51,15 @@
 }
 
 .count {
-    @include fontFam($font-bold);
+    @include fontFam($font-bold, $font-arial);
     font-size: rems(30);
     line-height: rems(30);
     position: relative;
 }
 
-// --- TIMER-BLOCK END ---
-// --- BENEFITS START ---
+/* --- TIMER-BLOCK END --- */
+
+/* --- BENEFITS-TEXT START --- */
 .benefits-text {
     background-color: $blue-light;
     color: $main-white;
@@ -100,8 +102,9 @@
     }
 }
 
-// --- BENEFITS END ---
-// --- PRICE-BLOCK START ---
+/* --- BENEFITS-TEXT END --- */
+
+/* --- PRICE-BLOCK START --- */
 .price-block {
     border-bottom: 1px solid $main-gray-3;
     display: flex;
@@ -126,7 +129,7 @@
     border-right: 1px solid $main-gray-3;
 
     .value {
-        @include fontFam($font-bold);
+        @include fontFam($font-bold, $font-arial);
         font-size: rems(30);
         line-height: rems(30);
         text-decoration: line-through;
@@ -142,28 +145,35 @@
     }
 
     .value {
-        @include fontFam($font-bold);
+        @include fontFam($font-bold, $font-arial);
         font-size: rems(36);
         line-height: rems(36);
     }
 }
 
-// --- PRICE-BLOCK END ---
+/* --- PRICE-BLOCK END --- */
 
-.list-advantages {
+.general-list {
     margin: rems(25) rems(40) 0;
+
     &__item {
         background: url(../images/icons/tick_icon.webp) left rems(1) no-repeat;
         padding: 0 0 0 rems(32);
     }
+
     &__item:not(:last-child) {
         margin: 0 0 rems(12);
     }
 }
 
+.offer__link {
+    margin: rems(30) auto rems(20);
+}
+
 .products-count {
     margin: rems(20) 0 0;
     text-align: center;
+
     b {
         background: $blue-light;
         border-radius: rems(4);
@@ -173,90 +183,4 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.offer-term {
-    background-color: $main-yellow;
-    border-radius: rems(10);
-    box-shadow: 0 0 rems(15) rgba(0, 0, 0, 0.3);
-    color: $main-black;
-    font-size: rems(24);
-    @include fontFam(700);
-    padding: rems(20);
-}
-
-
-.order-form {
-    display: flex;
-    flex-flow: column nowrap;
-    row-gap: 20px;
-}
-
-.field {
-    background-color: $main-gray-2;
-    background-repeat: no-repeat;
-    border: 1px solid $main-gray-3;
-    border-radius: rems(4);
-    color: $main-black;
-    display: block;
-    @include fontFam($font-regular);
-    font-size: rems(16);
-    // margin: rems(25) auto rems(20);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: rems(400);
-    padding: rems(23) rems(20) rems(23) rems(80);
-    width: 100%;
-
-    &::placeholder {
-        color: $main-black;
-    }
-
-    &:focus {
-        box-shadow: 0 0 rems(15) rgba(0, 0, 0, 0.3);
-    }
-
-    &:focus::placeholder {
-        color: transparent;
-    }
-}
-
-.order-form__input-name {
-    margin-top: rems(25);
-    background-image: url(../images/icons/offer__name_icon.webp);
-    background-position: 23px center;
-}
-
-.order-form__input-phone {
-    background-image: url(../images/icons/offer__phone_icon.webp);
-    background-position: 20px center;
-}
-
-.clarifying-info {
-    padding: rems(20) 0 rems(60);
-    text-align: center;
-}
+/* --- OFFER BLOCK END --- */

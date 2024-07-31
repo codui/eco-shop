@@ -1,0 +1,13 @@
+.customer-reviews {
+    background-color: $blue-light;
+    padding: rems(30) rems(20) rems(40);
+}
+
+.slider {
+    background-color: red;
+    border-radius: rems(4);
+    box-shadow: 0 -3px 0 #1185a9 inset;
+    min-height: rems(523);
+    overflow: hidden;
+    position: relative;
+}

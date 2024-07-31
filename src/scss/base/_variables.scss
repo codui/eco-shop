@@ -4,16 +4,21 @@ $root-font-size: 16;
 $content-width: 480; // Content width
 $pad-top-bottom: 10;
 $pad-left-right: 20;
-// FONT
+// FONT for using in SCSS
 $font-path: 'fonts';
 $font-regular: 400;
 $font-bold: 700;
-$font-avenir-bold: 'AvenirNextCyr-Bold';
+$font-arial: 'ArialBold';
+// FONTS FOR @font-face
 $font-avenir-regular: 'AvenirNextCyr-Regular';
+$font-avenir-bold: 'AvenirNextCyr-Bold';
+$font-arial-bold: 'Arial-BoldMT';
 // COLORS
 $main-black: #333;
 $main-white: #fff;
 $blue-light: #149cc7;
+$blue-dark: #107d9f;
+$blue-dark-2: #1185a9;
 $blood-red: #ee3737;
 $main-yellow: #ffd800;
 $main-gray-1: #eee;
