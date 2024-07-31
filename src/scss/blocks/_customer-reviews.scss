@@ -1,13 +1,72 @@
 .customer-reviews {
     background-color: $blue-light;
     padding: rems(30) rems(20) rems(40);
+    text-align: center;
+
+    &__info {
+        padding: rems(20) rems(30) rems(67);
+    }
+
+    &__title {
+        margin: 0 0 rems(10);
+        @include fontFam($font-bold);
+    }
 }
 
 .slider {
-    background-color: red;
+    background-color: $main-white;
     border-radius: rems(4);
     box-shadow: 0 -3px 0 #1185a9 inset;
     min-height: rems(523);
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
+
+    &-nav__left,
+    &-nav__right {
+        background: $blue-light url(../images/slider/slider__arrows.webp) no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        height: rems(40);
+        max-width: rems(40);
+        position: absolute;
+        top: rems(100);
+        width: 100%;
+    }
+
+    &-nav__left {
+        background-position: left center;
+        left: rems(-20);
+    }
+
+    &-nav__right {
+        background-position: right center;
+        right: rems(-20);
+    }
+
+    &-dots {
+        bottom: rems(33);
+        font-size: 0;
+        left: 0;
+        letter-spacing: rems(-1);
+        line-height: 0;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        &__item {
+            background: $main-black;
+            border-radius: 50%;
+            display: inline-block;
+            height: rems(10);
+            margin: 0 rems(4);
+            vertical-align: middle;
+            width: rems(10);
+        }
+    }
+
+    &-active {
+        background: $blue-light;
+        border-radius: rems(5);
+        width: rems(20);
+    }
 }

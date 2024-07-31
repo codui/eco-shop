@@ -5,14 +5,15 @@ $content-width: 480; // Content width
 $pad-top-bottom: 10;
 $pad-left-right: 20;
 // FONT for using in SCSS
-$font-path: 'fonts';
+$font-path: "fonts";
 $font-regular: 400;
 $font-bold: 700;
-$font-arial: 'ArialBold';
+$font-arial: "ArialBold";
+$font-avenir: "AvenirNextCyr";
 // FONTS FOR @font-face
-$font-avenir-regular: 'AvenirNextCyr-Regular';
-$font-avenir-bold: 'AvenirNextCyr-Bold';
-$font-arial-bold: 'Arial-BoldMT';
+$font-avenir-regular: "AvenirNextCyr-Regular";
+$font-avenir-bold: "AvenirNextCyr-Bold";
+$font-arial-bold: "Arial-BoldMT";
 // COLORS
 $main-black: #333;
 $main-white: #fff;
