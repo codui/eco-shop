@@ -1,0 +1,46 @@
+.delivery-payment {
+    &__title {
+        margin-top: rems(30);
+    }
+
+    &__item {
+        border-top: rems(4) solid $main-gray-4;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        min-height: rems(204);
+        width: 100%;
+
+        &:nth-child(odd) .delivery-payment__text {
+            padding: 0 rems(20) 0 0;
+        }
+
+        &:nth-child(even) .delivery-payment__text {
+            padding: 0 0 0 rems(20);
+        }
+    }
+
+    &__item_reverse {
+        flex-flow: row-reverse;
+    }
+
+    &__text {
+        align-items: center;
+        display: flex;
+        flex-basis: 50%;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+
+        &-title {
+            color: $blue-light;
+            @include fontFam($font-bold);
+            margin: 0 0 rems(5);
+        }
+    }
+}
+
+.img-delivery {
+    max-width: rems(220);
+    width: 100%;
+}

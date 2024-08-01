@@ -2,7 +2,7 @@
 .offer-blue {
     background-color: $blue-light;
     color: $main-white;
-    padding: rems(30) 0 rems(30);
+    padding: rems(30) 0 0;
 
     .general-list {
         margin: 0;
@@ -58,6 +58,6 @@
 }
 
 .image-prod-10 {
-    margin: rems(60) 0;
+    margin: rems(25) 0 rems(60);
 }
 /*--- OFFER-BLUE END ---*/

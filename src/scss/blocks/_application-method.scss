@@ -2,6 +2,11 @@
 .image-prod-4,
 .image-prod-5 {
     display: block;
+}
+.image-prod-4 {
     margin: rems(20) auto 0;
+}
+.image-prod-5 {
+    margin: rems(20) auto rems(25);
 }
 /*--- APPLICATION-METHOD END ---*/

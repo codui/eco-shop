@@ -8,8 +8,8 @@
         background-color: $blue-light;
         color: $main-white;
         font-size: rems(32);
-        line-height: rems(40);
-        padding: rems(12) 0 rems(35);
+        line-height: rems(36);
+        padding: rems(10) 0 rems(42);
     }
 }
 
@@ -17,7 +17,7 @@
 .timer-block {
     display: flex;
     justify-content: space-between;
-    padding: rems(8) rems(10) rems(7) rems(20);
+    padding: 0 rems(10) rems(7) rems(20);
 
     &__text {
         background: url(../images/icons/offer__clock_icon.webp) left 12% no-repeat;
@@ -37,6 +37,9 @@
     &__item {
         flex-basis: 25%;
         text-align: center;
+        .text {
+            font-size: rems(14);
+        }
 
         &:not(:last-child) .count::after {
             content: ':';
@@ -82,10 +85,11 @@
             content: '';
             display: block;
             left: 0;
-            min-height: rems(34);
+            min-height: rems(36);
             position: absolute;
             top: rems(-2);
-            width: rems(34);
+            max-width: rems(36);
+            width: 100%;
         }
 
         &:nth-child(1)::before {
@@ -118,9 +122,10 @@
     font-size: rems(14);
     min-height: rems(90);
     line-height: rems(14);
-    padding: rems(20) 0 0 0;
+    padding: rems(15) 0 0 0;
 
     .text {
+        padding-top: rems(5);
         margin-bottom: rems(3);
     }
 }
@@ -167,7 +172,7 @@
 }
 
 .offer__link {
-    margin: rems(30) auto rems(20);
+    margin: rems(25) auto rems(20);
 }
 
 .products-count {
