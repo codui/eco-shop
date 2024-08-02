@@ -46,4 +46,25 @@ img {
         box-shadow: none;
         color: $main-black;
     }
+    &:focus {
+        box-shadow: 0 0 rems(15) rgba(0, 0, 0, 0.3);
+        color: blueviolet;
+    }
+}
+
+.error {
+    position: relative;
+}
+
+.error .field {
+    border-color: $blood-red;
+}
+
+.error-label {
+    bottom: rems(41);
+    color: red;
+    display: block;
+    @include fontFam($font-bold);
+    left: 25%;
+    position: absolute;
 }
