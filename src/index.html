@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk"> 
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -320,17 +320,21 @@
                 <form class="order-form" id="form-order" onsubmit="sendEmailTelegram(event)">
                     <div class="wrap-input">
                         <input id="buyer-name" class="field order-form__input-name" type="text" name="name"
-                            placeholder="Введіть Ваше ім'я" title="Введіть Ваше ім'я. Воно має бути не менше двох символів українською чи російською чи англійською мовою." minlength="2" maxlength="40" required autocomplete="off"
+                            placeholder="Введіть Ваше ім'я"
+                            title="Введіть Ваше ім'я. Воно має бути не менше двох символів українською чи російською чи англійською мовою."
+                            minlength="2" maxlength="40" required autocomplete="off"
                             pattern="^[a-zA-Zа-яА-ЯёЁєЄіІїЇґҐ]+$">
                     </div>
 
                     <div class="wrap-input">
-                    <input id="buyer-phone" class="field order-form__input-phone" type="tel" name="phone"
-                        placeholder="Введіть Ваш телефон" title="Вкажіть ваш телефон у форматі 10 цифр без пробілів чи будь-яких інших символів. Перші три цифри - код вашого мобільного оператора (наприклад 050 і т.ін.), далі сім цифр номера телефону" minlength="10" maxlength="10" required autocomplete="off"
-                        pattern="^0\d{9}$">
+                        <input id="buyer-phone" class="field order-form__input-phone" type="tel" name="phone"
+                            placeholder="Введіть Ваш телефон"
+                            title="Вкажіть ваш телефон у форматі 10 цифр без пробілів чи будь-яких інших символів. Перші три цифри - код вашого мобільного оператора (наприклад 050 і т.ін.), далі сім цифр номера телефону"
+                            minlength="10" maxlength="10" required autocomplete="off" pattern="^0\d{9}$">
                     </div>
 
-                    <button id="order-button" class="order-form__button btn" type="submit" focus>ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+                    <button id="order-button" class="order-form__button btn" type="submit" focus>ОФОРМИТИ
+                        ЗАМОВЛЕННЯ</button>
                 </form>
                 <div class="products-count">
                     * залишилось <b>12</b> штук по акції
@@ -348,7 +352,7 @@
 
     </div>
 
-    <script defer src="./js/main.min.js"></script>
+    <script defer type="module" src="./js/main.min.js"></script>
 </body>
 
 </html>

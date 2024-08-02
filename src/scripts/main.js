@@ -1,11 +1,14 @@
-const TELEGRAM_BOT_TOKEN = '7419254486:AAEmfrYyu45l_G-fDsw1enLe6qoQJxs38uI';
-const TELEGRAM_CHAT_ID = '@sadovShop';
+import * as apiObject from "../../info-about-project/telegbot-tok.js";
+
+const {TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID} = apiObject;
 // API - адрес куда посылаем запрос
-const API = `https://api.telegram.org./bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+const API = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage';
 // Bot name - order processing
 // Username for bot - sadovShopBot
 // Name of group with bot - sadovShop
 
+alert(TELEGRAM_BOT_TOKEN);
+alert(TELEGRAM_CHAT_ID);
 
 async function sendEmailTelegram(event) {
     event.preventDefault();
@@ -19,10 +22,12 @@ async function sendEmailTelegram(event) {
 
     const {name, phone} = fromDataObject;
     const dataStrFromSite = `Замовлення від ${name}. Номер телефора ${phone}.`;
+    console.log(dataStrFromSite);
 
     try {
         formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...'
-        const response = await fetch(API, {
+        const response = await fetch(API, 
+            {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +36,8 @@ async function sendEmailTelegram(event) {
                 chat_id: TELEGRAM_CHAT_ID,
                 text: dataStrFromSite
             })
-        })
+        }
+    )
         if (response.ok){
             alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
             // Чистим форму
