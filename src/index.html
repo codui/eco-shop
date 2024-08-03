@@ -77,7 +77,7 @@
                 <li class="general-list__item">Працює з усіма типами пральних машин</li>
                 <li class="general-list__item">Очищає всього за 20 хвилин</li>
             </ul>
-            <a class="offer__link btn" href="#">
+            <a class="offer__link btn" href="#order-button">
                 ЗАМОВИТИ ЗАРАЗ
             </a>
             <p class="products-count">
@@ -178,7 +178,7 @@
                 <li class="general-list__item">Розмір: 2,6 см 2,6 см 2,6 см.</li>
                 <li class="general-list__item">В упаковці 12 шт.</li>
             </ul>
-            <a class="offer__link btn" href="#">
+            <a class="offer__link btn" href="#order-button">
                 ЗАМОВИТИ ЗАРАЗ
             </a>
             <p class="products-count">
@@ -197,27 +197,48 @@
         <section class="customer-reviews">
             <h2 class="title title_white">Відгуки покупців</h2>
 
+
+
             <div class="slider">
-                <div class="slider__item">
-                    <img class="slider-img-1" src="./images/slider/slider-01.jpg" alt="washing capsules 3">
-                    <div class="customer-reviews__info">
-                        <h4 class="customer-reviews__title">Марина Панченко, 31 год</h4>
-                        <p class="customer-reviews__text">Доставили быстро. Оказались очень практичной вещью. Запах
-                            неприятный действительно исчез. На
-                            машину 7 кг использовала 2 капсулы.</p>
+                <div class="slider__show">
+                    <div class="slider__row">
+                        <div class="slider__cell">
+                            <img class="slider-img-1" src="./images/slider/slider-01.jpg" alt="washing capsules 3">
+                            <div class="customer-reviews__info">
+                                <h4 class="customer-reviews__title">Светлана Кобцева, 26 лет</h4>
+                                <p class="customer-reviews__text">Я в востогре! Давно я не встречала на столько эффективного средства! Все, что нужно сделать, это положить 1 капсулу в стиральную машину и смотреть на волшебство. Огромное спасибо!</p>
+                            </div>
+                        </div>
+                        <div class="slider__cell">
+                            <img class="slider-img-2" src="./images/slider/slider-02.jpg" alt="washing capsules 3">
+                            <div class="customer-reviews__info">
+                                <h4 class="customer-reviews__title">Марина Панченко, 31 год</h4>
+                                <p class="customer-reviews__text">Доставили быстро. Оказались очень практичной вещью. Запах неприятный действительно исчез. На машину 7 кг использовала 2 капсулы.</p>
+                            </div>
+                        </div>
+                        <div class="slider__cell">
+                            <img class="slider-img-3" src="./images/slider/slider-03.jpg" alt="washing capsules 3">
+                            <div class="customer-reviews__info">
+                                <h4 class="customer-reviews__title">Оксана Кортина, 32 года</h4>
+                                <p class="customer-reviews__text">Честно сказать, я в шоке! Это средство очистило то что я не могла очистить годами! Если вы сомневаетесь еще брать или не брать. БЕРИТЕ! Эффективно и имеет приятный запах. Что еще можно желать?!</p>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="slider-dots">
+                        <div class="slider-dots__item"></div>
+                        <div class="slider-dots__item slider-dots__item_active"></div>
+                        <div class="slider-dots__item"></div>
+                    </div>
                 </div>
-                <div class="slider-nav">
-                    <div class="slider-nav__left"></div>
-                    <div class="slider-nav__right"></div>
-                </div>
-                <div class="slider-dots">
-                    <div class="slider-dots__item slider-active"></div>
-                    <div class="slider-dots__item"></div>
-                    <div class="slider-dots__item"></div>
+                <div class="slider__arrows">
+                    <div class="slider__arrows_left"></div>
+                    <div class="slider__arrows_right"></div>
                 </div>
             </div>
+
+
+
 
         </section>
         <!-- * CUSTOMER-REVIEWS END -->
@@ -352,7 +373,9 @@
 
     </div>
 
-    <script defer type="module" src="./js/main.min.js"></script>
+    <!-- <script type="module" src="./js/main.min.js"></script> -->
+    <script defer src="./js/main.min.js"></script>
+</body>
 </body>
 
 </html>

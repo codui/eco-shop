@@ -1,14 +1,12 @@
-import * as apiObject from "../../info-about-project/telegbot-tok.js";
+// import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
 
-const {TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID} = apiObject;
-// API - адрес куда посылаем запрос
-const API = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage';
 // Bot name - order processing
 // Username for bot - sadovShopBot
 // Name of group with bot - sadovShop
 
-alert(TELEGRAM_BOT_TOKEN);
-alert(TELEGRAM_CHAT_ID);
+// API - адрес куда посылаем запрос
+const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
 
 async function sendEmailTelegram(event) {
     event.preventDefault();
@@ -21,7 +19,8 @@ async function sendEmailTelegram(event) {
     const fromDataObject = Object.fromEntries(formData.entries());
 
     const {name, phone} = fromDataObject;
-    const dataStrFromSite = `Замовлення від ${name}. Номер телефора ${phone}.`;
+    const dataStrFromSite = `Ім'я покупця: ${name} 
+Номер телефона: ${phone}`;
     console.log(dataStrFromSite);
 
     try {
@@ -60,61 +59,48 @@ async function sendEmailTelegram(event) {
 
 
 
+let sliderBlock = document.querySelector('.slider');
+let sliderRow = document.querySelector('.slider__row');
+let arrowsBlock = document.querySelector('.slider__arrows');
+let widthSliderCell = 440;
+sliderRow.style.left = '-440px';
 
+function clickHandler(event) {
+    let leftCoordinate = Number(sliderRow.style.left.slice(0, -2))
+    let dotsLiveCollection = sliderBlock.getElementsByClassName('slider-dots__item');
+    let dotActiveNowElement = sliderBlock.getElementsByClassName('slider-dots__item_active')[0];
+    let numberActiveElementNow = Array.from(dotsLiveCollection).indexOf(dotActiveNowElement);
+    let nextNumberActiveElement = 0;
 
+    function removeActiveClass(acitveElement) {
+        acitveElement.classList.remove('slider-dots__item_active');
+    }
 
+    removeActiveClass(dotActiveNowElement);
+    // Processing click on left arrow
+    if (event.target.classList.contains('slider__arrows_left')) {
+        if (leftCoordinate === 0) {
+            nextNumberActiveElement = (dotsLiveCollection.length) - 1;
+            sliderRow.style.left = '-880px';
+        } else  {
+            nextNumberActiveElement = numberActiveElementNow - 1;
+            sliderRow.style.left = (leftCoordinate + widthSliderCell) + 'px';
+        }
+    }
+    // Processing click on right arrow
+    if (event.target.classList.contains('slider__arrows_right')) {
+        if (leftCoordinate === -880) {
+            sliderRow.style.left = '0px';
+            nextNumberActiveElement = 0;
+        } else  {
+            nextNumberActiveElement = numberActiveElementNow + 1;
+            sliderRow.style.left = (leftCoordinate - widthSliderCell) + 'px';
+        }
+    }
+    dotsLiveCollection[nextNumberActiveElement].classList.add('slider-dots__item_active');
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sliderBlock.addEventListener('click', clickHandler);
 
 
 

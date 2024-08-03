@@ -13,45 +13,65 @@
     }
 }
 
+
 .slider {
     background-color: $main-white;
     border-radius: rems(4);
     box-shadow: 0 -3px 0 #1185a9 inset;
     min-height: rems(523);
-    // overflow: hidden;
     position: relative;
 
-    &-nav__left,
-    &-nav__right {
-        background: $blue-light url(../images/slider/slider__arrows.webp) no-repeat;
-        border-radius: 50%;
-        cursor: pointer;
-        height: rems(40);
-        max-width: rems(40);
+    &__show {
+        height: rems(600);
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: rems(440);
+    }
+
+    &__row {
+        display: flex;
+        left: rems(-440);
         position: absolute;
-        top: rems(100);
-        width: 100%;
+        top: 0;
+        width: rems(1320);
+        transition: all 0.5s ease 0s;
     }
 
-    &-nav__left {
-        background-position: left center;
-        left: rems(-20);
-    }
+    &__cell {
+        width: rems(440);
+        height: rems(600);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
 
-    &-nav__right {
-        background-position: right center;
-        right: rems(-20);
+        .customer-reviews__info,
+        picture {
+            flex-basis: 50%;
+        }
+
+        picture {
+            height: 60%;
+        }
     }
 
     &-dots {
-        bottom: rems(33);
+        bottom: 3%;
+        display: flex;
         font-size: 0;
-        left: 0;
+        justify-content: space-between;
+        // bottom: rems(33);
+        // left: 0;
+        left: 50%;
         letter-spacing: rems(-1);
         line-height: 0;
+        max-width: rems(73);
         position: absolute;
         text-align: center;
+        transform: translateX(-50%);
         width: 100%;
+        z-index: 2;
 
         &__item {
             background: $main-black;
@@ -61,12 +81,107 @@
             margin: 0 rems(4);
             vertical-align: middle;
             width: rems(10);
+
+            &_active {
+                background: $blue-light;
+                border-radius: rems(5);
+                width: rems(20);
+            }
         }
     }
 
-    &-active {
-        background: $blue-light;
-        border-radius: rems(5);
-        width: rems(20);
+    &__arrows {
+        height: rems(600);
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: rems(440);
     }
+
+    &__arrows_left,
+    &__arrows_right {
+        background: $blue-light url(../images/slider/slider__arrows.webp) no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        height: rems(40);
+        max-width: rems(40);
+        position: absolute;
+        // top: rems(100);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    &__arrows_left {
+        background-position: left center;
+        left: rems(-20);
+    }
+
+    &__arrows_right {
+        background-position: right center;
+        right: rems(-20);
+    }
+
 }
+
+
+
+// .slider {
+//     background-color: $main-white;
+//     border-radius: rems(4);
+//     box-shadow: 0 -3px 0 #1185a9 inset;
+//     min-height: rems(523);
+//     // overflow: hidden;
+//     position: relative;
+
+//     &-nav__left,
+//     &-nav__right {
+//         background: $blue-light url(../images/slider/slider__arrows.webp) no-repeat;
+//         border-radius: 50%;
+//         cursor: pointer;
+//         height: rems(40);
+//         max-width: rems(40);
+//         position: absolute;
+//         top: rems(100);
+//         width: 100%;
+//     }
+
+//     &-nav__left {
+//         background-position: left center;
+//         left: rems(-20);
+//     }
+
+//     &-nav__right {
+//         background-position: right center;
+//         right: rems(-20);
+//     }
+
+//     &-dots {
+//         bottom: rems(33);
+//         font-size: 0;
+//         left: 0;
+//         letter-spacing: rems(-1);
+//         line-height: 0;
+//         position: absolute;
+//         text-align: center;
+//         width: 100%;
+
+//         &__item {
+//             background: $main-black;
+//             border-radius: 50%;
+//             display: inline-block;
+//             height: rems(10);
+//             margin: 0 rems(4);
+//             vertical-align: middle;
+//             width: rems(10);
+//         }
+//     }
+
+//     &-active {
+//         background: $blue-light;
+//         border-radius: rems(5);
+//         width: rems(20);
+//     }
+// }

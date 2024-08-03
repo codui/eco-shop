@@ -1,4 +1,0 @@
-const TELEGRAM_BOT_TOKEN = '7419254486:AAEmfrYyu45l_G-fDsw1enLe6qoQJxs38uI';
-const TELEGRAM_CHAT_ID = '@sadovShop';
-
-export {TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID};
