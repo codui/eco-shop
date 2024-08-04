@@ -75,6 +75,24 @@ showTimeToMidnight();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * 
  * 
@@ -83,13 +101,14 @@ showTimeToMidnight();
  */
 // import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
 
-// Bot name - order processing
-// Username for bot - sadovShopBot
-// Name of group with bot - sadovShop
+// // Bot name - order processing
+// // Username for bot - sadovShopBot
+// // Name of group with bot - sadovShop
 
-// API - адрес куда посылаем запрос
-const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+// // API - адрес куда посылаем запрос
+// const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
+const API = `https://eco-shop-7jg7.onrender.com/sendMessage`;
 
 async function sendEmailTelegram(event) {
     event.preventDefault();
@@ -136,6 +155,72 @@ async function sendEmailTelegram(event) {
         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *  Код для render
+ */
+// document.getElementById('form-order').addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     const message = document.getElementById('buyer-name').value;
+
+//     const response = await fetch('https://eco-shop-7jg7.onrender.com/sendMessage', { // замените на URL вашего Render приложения
+//         method: 'POST',
+//         headers: {
+//         'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({ message }),
+//     });
+
+//     const result = await response.json();
+//     console.log(result);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
