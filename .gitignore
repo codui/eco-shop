@@ -6,5 +6,5 @@ package-lock.json
 *.ods
 *.ods#
 README.md
-./info-about-project
-./src/scripts/ltelegbot-tok.js
+/info-about-project
+/src/scripts/ltelegbot-tok.js

@@ -1,3 +1,86 @@
+/**
+ * TIMER
+ */
+let hoursCellArray = document.getElementsByClassName('hours');
+let minutesCellArray = document.getElementsByClassName('minutes');
+let secondsCellArray = document.getElementsByClassName('seconds');
+
+function showTimeToMidnight() {
+    let now = new Date();
+    let nowHours = now.getHours();
+    let nowMinutes = now.getMinutes();
+    let nowSeconds = now.getSeconds();
+
+    let hoursToMidnight = 0;
+    let minutesToMidnight = 0;
+    let secondsToMidnight = 0;
+
+    // Get hours to midnight
+    function getHoursToMidnight() {
+        if (nowMinutes === 0 && nowSeconds === 0) {
+            hoursToMidnight = 24 - nowHours;
+        } else {
+            hoursToMidnight = 23 - nowHours;
+        }
+        hoursToMidnight = String(hoursToMidnight);
+        return hoursToMidnight.length === 2 ? hoursToMidnight : '0' + hoursToMidnight;
+    }
+
+    // Get minutes to midnight
+    function getMinutesToMidnight() {
+        if (nowMinutes === 0 && nowSeconds === 0) {
+            minutesToMidnight = 0;
+        } else {
+            minutesToMidnight = 59 - nowMinutes;
+        }
+        minutesToMidnight = String(minutesToMidnight);
+        return minutesToMidnight.length === 2 ? minutesToMidnight : '0' + minutesToMidnight;
+    }
+
+    // Get seconds to midnight
+    function getSecondsToMidnight() {
+        if (nowSeconds === 0) {
+            secondsToMidnight = 0;
+        } else {
+            secondsToMidnight = 60 - nowSeconds;
+        }
+        secondsToMidnight = String(secondsToMidnight);
+        return secondsToMidnight.length === 2 ? secondsToMidnight : '0' + secondsToMidnight;
+    }
+
+    // Update timer cells
+    for (let item of hoursCellArray) {
+        item.textContent = getHoursToMidnight();
+    }
+    for (let item of minutesCellArray) {
+        item.textContent = getMinutesToMidnight();
+    }
+    for (let item of secondsCellArray) {
+        item.textContent = getSecondsToMidnight();
+    }
+    // console.log(`${getHoursToMidnight()}:${getMinutesToMidnight()}:${getSecondsToMidnight()}`);
+    setTimeout(showTimeToMidnight, 200);
+}
+
+showTimeToMidnight();
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 
+ * 
+ * - - - TELEGRAM BOT - - -
+ * 
+ */
 // import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
 
 // Bot name - order processing
@@ -59,6 +142,15 @@ async function sendEmailTelegram(event) {
 
 
 
+
+
+/**
+ * 
+ * 
+ * - - - SLIDER - - -
+ * 
+ * 
+ */
 let sliderBlock = document.querySelector('.slider');
 let sliderRow = document.querySelector('.slider__row');
 let arrowsBlock = document.querySelector('.slider__arrows');
@@ -113,7 +205,13 @@ sliderBlock.addEventListener('click', clickHandler);
 
 
 
-
+/**
+ * 
+ * 
+ * - - - FORM VALIDATION - - -
+ * 
+ * 
+ */
 // let form = document.getElementById('form-order');
 
 
