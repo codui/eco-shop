@@ -142,7 +142,8 @@ function scripts() {
 function watch() { // Track changes
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./dist",
+        open: false
         }
     });
     gulp.watch(paths.html.src, htmTask);
