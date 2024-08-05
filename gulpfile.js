@@ -26,7 +26,7 @@ import newer from 'gulp-newer';
 import browserSync from 'browser-sync';
 browserSync.create();
 
-import ttf2woff2 from 'gulp-ttf2woff2';
+// import ttf2woff2 from 'gulp-ttf2woff2';
 import { makeConvert } from './src/lib-ttf-to-woff/font-ttf-woff.js';
 
 // Paths to files
@@ -59,15 +59,15 @@ async function clean() { // Cleaning folders
 }
 
 
-// async function ttfToWoff() {
-//     return makeConvert();
-// }
+async function ttfToWoff() {
+    return makeConvert();
+}
 
 
 function fontsTask(done) {
     return gulp.src(paths.fonts.src)
-        .pipe(ttf2woff2())
-        .pipe(gulp.src(paths.fonts.src))
+        // .pipe(ttf2woff2())
+        // .pipe(gulp.src(paths.fonts.src))
         .pipe(gulp.dest(paths.fonts.dest))
         .on('end', done);
 }
@@ -157,10 +157,10 @@ function watch() { // Track changes
 }
 
 // Export functions as tasks
-export { clean, fontsTask, styles, scripts, imgTask, htmTask, watch }; // ttfToWoff,
+export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, watch }; // 
 
 // series() performs tasks in sequence
-const build = gulp.series(clean, fontsTask, htmTask, gulp.parallel(styles, scripts, imgTask), watch); // ttfToWoff
+const build = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask), watch); //
 // const buildParalel = gulp.parallel(clean, styles); // parallel() performs tasks in parallel
 
 
