@@ -83,152 +83,6 @@ showTimeToMidnight();
 
 
 
-
-
-
-
-
-
-
-
-
-
-// /**
-//  * 
-//  * 
-//  * - - - TELEGRAM BOT - - -
-//  * 
-//  */
-// // import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
-
-// // // Bot name - order processing
-// // // Username for bot - sadovShopBot
-// // // Name of group with bot - sadovShop
-
-// // // API - адрес куда посылаем запрос
-// // const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-
-// const API = `https://eco-shop-7jg7.onrender.com/sendMessage`;
-
-// async function sendEmailTelegram(event) {
-//     event.preventDefault();
-
-//     const form = event.target;
-//     const formBtn = document.querySelector('#form-order #order-button');
-//     // Оборачиваем в обёртку нашу форму
-//     const formData = new FormData(form);
-//     // Получаем данные в виде объекта
-//     const fromDataObject = Object.fromEntries(formData.entries());
-
-//     const {name, phone} = fromDataObject;
-//     const dataStrFromSite = `Ім'я покупця: ${name} 
-// Номер телефона: ${phone}`;
-//     console.log(dataStrFromSite);
-
-//     try {
-//         formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...'
-//         const response = await fetch(API, 
-//             {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({
-//                 chat_id: TELEGRAM_CHAT_ID,
-//                 text: dataStrFromSite
-//             })
-//         }
-//     )
-//         if (response.ok){
-//             alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
-//             // Чистим форму
-//             form.reset();
-//         } else {
-//             // Создаём ошибку и передаём её объект ответа с ошибкой.
-//             // Дальше эта ошибка перейдёт в блок catch(error) где её можно обработать
-//             throw new Error(response.statusText)
-//         }
-//     } catch (error) {
-//         console.error();
-//         alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кноку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
-//     } finally {
-//         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- *  Код для render
- */
-// document.getElementById('form-order').addEventListener('submit', async (e) => {
-//     e.preventDefault();
-//     const message = document.getElementById('buyer-name').value;
-
-//     const response = await fetch('https://eco-shop-7jg7.onrender.com/sendMessage', { // замените на URL вашего Render приложения
-//         method: 'POST',
-//         headers: {
-//         'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({ message }),
-//     });
-
-//     const result = await response.json();
-//     console.log(result);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * 
  * 
@@ -278,6 +132,115 @@ function clickHandler(event) {
 }
 
 sliderBlock.addEventListener('click', clickHandler);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function sendEmailTelegram(event) {
+    event.preventDefault();
+
+    const express = require('express');
+    const fetch = require('node-fetch');
+    require('dotenv').config();
+    const app = express();
+    const port = process.env.PORT || 3000;
+
+    app.use(express.json());
+
+    const form = event.target;
+    const formBtn = document.querySelector('#form-order #order-button');
+    // Оборачиваем в обёртку нашу форму
+    const formData = new FormData(form);
+    // Получаем данные в виде объекта
+    const fromDataObject = Object.fromEntries(formData.entries());
+
+    const { name, phone } = fromDataObject;
+    const dataStrFromSite = `Ім'я покупця: ${name} Номер телефона: ${phone}`;
+
+    try {
+        formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...'
+
+        app.post('/sendMessage', async (req, res) => {
+            const token = process.env.TELEGRAM_TOKEN;
+            const chatId = process.env.TELEGRAM_CHAT_ID;
+            // const { message } = req.body;
+
+            // if (!message) {
+            //     return res.status(400).json({ error: 'Message is required' });
+            // }
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage`;
+            const response = await fetch(url,
+                {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: dataStrFromSite
+                    })
+                }
+            );
+            
+            if (response.ok) {
+                alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
+                // Чистим форму
+                form.reset();
+            } else {
+                // Создаём ошибку и передаём её объект ответа с ошибкой.
+                // Дальше эта ошибка перейдёт в блок catch(error) где её можно обработать
+                throw new Error(response.statusText)
+            }
+        });
+    } catch (error) {
+        console.error();
+        alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кноку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
+    } finally {
+        formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
+    }
+
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

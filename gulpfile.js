@@ -139,24 +139,23 @@ function scripts() {
 }
 
 
-// function watch() { // Track changes
-//     // browserSync.init({
-//     //     server: {
-//     //         baseDir: "./dist",
-//     //     // open: false // ! Comment thiw row when work on PC !
-//     //     },
-//     //     open: false
-//     // });
-//     gulp.watch(paths.html.src, htmTask);
-//     gulp.watch(paths.styles.src, styles);
-//     /* first, we specify the path to the files that we will track, 
-//     then a task (function) is transmitted, which 
-//     will be executed when changing in these files */
-//     gulp.watch(paths.scripts.src, scripts);
-//     gulp.watch(paths.images.src, imgTask);
-//     gulp.watch(paths.fonts.src, fontsTask);
-//     gulp.watch(paths.html.dest).on('change', browserSync.reload);
-// }
+function watch() { // Track changes
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+        },
+        open: false // ! Uncomment this row when DEPLOY on Vercel!
+    });
+    gulp.watch(paths.html.src, htmTask);
+    gulp.watch(paths.styles.src, styles);
+    /* first, we specify the path to the files that we will track, 
+    then a task (function) is transmitted, which 
+    will be executed when changing in these files */
+    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.images.src, imgTask);
+    gulp.watch(paths.fonts.src, fontsTask);
+    gulp.watch(paths.html.dest).on('change', browserSync.reload);
+}
 
 // Export functions as tasks
 export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask }; // , watch
