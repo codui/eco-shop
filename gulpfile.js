@@ -45,7 +45,7 @@ const paths = {
     },
     scripts: {
         src: 'src/scripts/**/*.js', // source from where the source files .js will be taken
-        dest: 'dist/js/' // final folder with ready-made files .js
+        dest: 'dist/scripts/' // final folder with ready-made files .js
     },
     images: {
         src: 'src/images/**',
