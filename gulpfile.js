@@ -143,8 +143,9 @@ function watch() { // Track changes
     browserSync.init({
         server: {
             baseDir: "./dist",
-        open: false // ! Comment thiw row when work on PC !
-        }
+        // open: false // ! Comment thiw row when work on PC !
+        },
+        open: false
     });
     gulp.watch(paths.html.src, htmTask);
     gulp.watch(paths.styles.src, styles);
