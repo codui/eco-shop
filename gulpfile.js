@@ -59,9 +59,9 @@ async function clean() { // Cleaning folders
 }
 
 
-async function ttfToWoff() {
-    return makeConvert();
-}
+// async function ttfToWoff() {
+//     return makeConvert();
+// }
 
 
 function fontsTask(done) {
@@ -157,10 +157,10 @@ function watch() { // Track changes
 }
 
 // Export functions as tasks
-export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, watch };
+export { clean, fontsTask, styles, scripts, imgTask, htmTask, watch }; // ttfToWoff,
 
 // series() performs tasks in sequence
-const build = gulp.series(clean, fontsTask, htmTask, ttfToWoff, gulp.parallel(styles, scripts, imgTask), watch);
+const build = gulp.series(clean, fontsTask, htmTask, gulp.parallel(styles, scripts, imgTask), watch); // ttfToWoff
 // const buildParalel = gulp.parallel(clean, styles); // parallel() performs tasks in parallel
 
 

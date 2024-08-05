@@ -93,68 +93,68 @@ showTimeToMidnight();
 
 
 
-/**
- * 
- * 
- * - - - TELEGRAM BOT - - -
- * 
- */
-// import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
+// /**
+//  * 
+//  * 
+//  * - - - TELEGRAM BOT - - -
+//  * 
+//  */
+// // import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
 
-// // Bot name - order processing
-// // Username for bot - sadovShopBot
-// // Name of group with bot - sadovShop
+// // // Bot name - order processing
+// // // Username for bot - sadovShopBot
+// // // Name of group with bot - sadovShop
 
-// // API - адрес куда посылаем запрос
-// const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+// // // API - адрес куда посылаем запрос
+// // const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-const API = `https://eco-shop-7jg7.onrender.com/sendMessage`;
+// const API = `https://eco-shop-7jg7.onrender.com/sendMessage`;
 
-async function sendEmailTelegram(event) {
-    event.preventDefault();
+// async function sendEmailTelegram(event) {
+//     event.preventDefault();
 
-    const form = event.target;
-    const formBtn = document.querySelector('#form-order #order-button');
-    // Оборачиваем в обёртку нашу форму
-    const formData = new FormData(form);
-    // Получаем данные в виде объекта
-    const fromDataObject = Object.fromEntries(formData.entries());
+//     const form = event.target;
+//     const formBtn = document.querySelector('#form-order #order-button');
+//     // Оборачиваем в обёртку нашу форму
+//     const formData = new FormData(form);
+//     // Получаем данные в виде объекта
+//     const fromDataObject = Object.fromEntries(formData.entries());
 
-    const {name, phone} = fromDataObject;
-    const dataStrFromSite = `Ім'я покупця: ${name} 
-Номер телефона: ${phone}`;
-    console.log(dataStrFromSite);
+//     const {name, phone} = fromDataObject;
+//     const dataStrFromSite = `Ім'я покупця: ${name} 
+// Номер телефона: ${phone}`;
+//     console.log(dataStrFromSite);
 
-    try {
-        formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...'
-        const response = await fetch(API, 
-            {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
-                text: dataStrFromSite
-            })
-        }
-    )
-        if (response.ok){
-            alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
-            // Чистим форму
-            form.reset();
-        } else {
-            // Создаём ошибку и передаём её объект ответа с ошибкой.
-            // Дальше эта ошибка перейдёт в блок catch(error) где её можно обработать
-            throw new Error(response.statusText)
-        }
-    } catch (error) {
-        console.error();
-        alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кноку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
-    } finally {
-        formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
-    }
-}
+//     try {
+//         formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...'
+//         const response = await fetch(API, 
+//             {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 chat_id: TELEGRAM_CHAT_ID,
+//                 text: dataStrFromSite
+//             })
+//         }
+//     )
+//         if (response.ok){
+//             alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
+//             // Чистим форму
+//             form.reset();
+//         } else {
+//             // Создаём ошибку и передаём её объект ответа с ошибкой.
+//             // Дальше эта ошибка перейдёт в блок catch(error) где её можно обработать
+//             throw new Error(response.statusText)
+//         }
+//     } catch (error) {
+//         console.error();
+//         alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кноку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
+//     } finally {
+//         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
+//     }
+// }
 
 
 
