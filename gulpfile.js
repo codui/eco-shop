@@ -144,7 +144,7 @@ function watch() { // Track changes
         server: {
             baseDir: "./dist",
         },
-        open: false // ! Uncomment this row when DEPLOY on Vercel!
+        // open: false // ! Uncomment this row when DEPLOY on Vercel!
     });
     gulp.watch(paths.html.src, htmTask);
     gulp.watch(paths.styles.src, styles);
@@ -158,12 +158,14 @@ function watch() { // Track changes
 }
 
 // Export functions as tasks
-export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask }; // , watch
+export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, watch }; // 
 
 // series() performs tasks in sequence
-const build = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask)); // , watch
+const build = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask, watch)); // 
 // const buildParalel = gulp.parallel(clean, styles); // parallel() performs tasks in parallel
 
+const production = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask));
 
+export {production};
 export { build };
 export default build; // Just write in terminal gulp
