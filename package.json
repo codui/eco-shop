@@ -1,49 +1,49 @@
 {
-  "name": "digital-sales",
-  "version": "1.0.0",
-  "description": "Landing page",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp production",
-    "start": "node dist/scripts/main.js"
-  },
-  "author": "codui",
-  "license": "ISC",
-  "browserslist": [
-    "> 1%",
-    "last 4 versions"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.24.9",
-    "@babel/preset-env": "^7.24.8",
-    "autoprefixer": "^10.4.19",
-    "browser-sync": "^3.0.2",
-    "del": "^7.1.0",
-    "gulp": "^5.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^9.1.0",
-    "gulp-newer": "^1.4.0",
-    "gulp-postcss": "^10.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.1.4",
-    "gulp-sass": "^5.1.0",
-    "gulp-size": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-ttf2woff2": "^4.0.1",
-    "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^5.0.0",
-    "gulp-webp-html-nosvg": "^1.1.1",
-    "sass": "^1.77.8",
-    "ttf2woff": "^3.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "node-fetch": "^3.3.2"
-  }
+    "name": "digital-sales",
+    "version": "1.0.0",
+    "description": "Landing page",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "gulp production",
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "author": "codui",
+    "license": "ISC",
+    "browserslist": [
+        "> 1%",
+        "last 4 versions"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.24.9",
+        "@babel/preset-env": "^7.25.0",
+        "autoprefixer": "^10.4.19",
+        "browser-sync": "^3.0.2",
+        "del": "^7.1.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "gulp": "^5.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^9.1.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-postcss": "^10.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-replace": "^1.1.4",
+        "gulp-sass": "^5.1.0",
+        "gulp-size": "^5.0.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-ttf2woff2": "^4.0.1",
+        "gulp-uglify": "^3.0.2",
+        "gulp-webp": "^5.0.0",
+        "gulp-webp-html-nosvg": "^1.1.1",
+        "node-fetch": "^3.3.2",
+        "nodemon": "^3.1.4",
+        "sass": "^1.77.8",
+        "ttf2woff": "^3.0.0"
+    }
 }
