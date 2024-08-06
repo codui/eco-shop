@@ -156,7 +156,7 @@ sliderBlock.addEventListener('click', clickHandler);
 // // Name of group with bot - sadovShop
 
 // // API - адрес куда посылаем запрос
-var API = "https://api.telegram.org/bot".concat(TELEGRAM_TOKEN, "/sendMessage");
+var API = "https://api.telegram.org/bot".concat(process.env.TELEGRAM_TOKEN, "/sendMessage");
 function sendEmailTelegram(_x) {
   return _sendEmailTelegram.apply(this, arguments);
 }
@@ -228,7 +228,7 @@ function _sendEmailTelegram() {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              chat_id: TELEGRAM_CHAT_ID,
+              chat_id: process.env.TELEGRAM_CHAT_ID,
               text: dataStrFromSite
             })
           });
