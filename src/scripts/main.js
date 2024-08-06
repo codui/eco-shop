@@ -204,7 +204,7 @@ async function sendEmailTelegram(event) {
             throw new Error('Failed to send message');
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
         alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кнопку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
     } finally {
         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
