@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp",
-    "start": "node dist/main.js"
+    "build": "gulp production",
+    "start": "node dist/scripts/main.js"
   },
   "author": "codui",
   "license": "ISC",
