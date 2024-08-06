@@ -128,8 +128,8 @@ function scripts() {
         .pipe(babel({
             presets: ['@babel/env']
         })) // transpiles javascript code into old standard code javascript, for old browsers
-        .pipe(uglify()) // minifies, compresses and optimizes javascript files
-        .pipe(concat('main.js')) // combine the files into one and immediately give the name to the combined file
+        // .pipe(uglify()) // minifies, compresses and optimizes javascript files
+        // .pipe(concat('main.js')) // combine the files into one and immediately give the name to the combined file
         .pipe(sourcemaps.write('.'))
         .pipe(size({
             showFiles: true
