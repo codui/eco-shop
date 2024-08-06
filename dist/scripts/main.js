@@ -156,8 +156,7 @@ sliderBlock.addEventListener('click', clickHandler);
 // // Name of group with bot - sadovShop
 
 // // API - адрес куда посылаем запрос
-
-var API = "https://api.telegram.org/bot".concat("7479691995:AAGGlLQptIiK00xtuhMGAB86veUWr_ND-54", "/sendMessage");
+var API = '/send-message';
 function sendEmailTelegram(_x) {
   return _sendEmailTelegram.apply(this, arguments);
 }
@@ -208,61 +207,59 @@ function sendEmailTelegram(_x) {
 // form.addEventListener('submit', handlerForm);
 function _sendEmailTelegram() {
   _sendEmailTelegram = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
-    var form, formBtn, formData, fromDataObject, name, phone, dataStrFromSite, response;
+    var form, formBtn, formData, fromDataObject, name, phone, response;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           event.preventDefault();
           form = event.target;
-          formBtn = document.querySelector('#form-order #order-button'); // Оборачиваем в обёртку нашу форму
-          formData = new FormData(form); // Получаем данные в виде объекта
+          formBtn = document.querySelector('#form-order #order-button');
+          formData = new FormData(form);
           fromDataObject = Object.fromEntries(formData.entries());
           name = fromDataObject.name, phone = fromDataObject.phone;
-          dataStrFromSite = "\u0406\u043C'\u044F \u043F\u043E\u043A\u0443\u043F\u0446\u044F: ".concat(name, " \n\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430: ").concat(phone);
-          console.log(dataStrFromSite);
-          _context.prev = 8;
+          console.log("\u0406\u043C'\u044F \u043F\u043E\u043A\u0443\u043F\u0446\u044F: ".concat(name, "\n\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430: ").concat(phone));
+          _context.prev = 7;
           formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...';
-          _context.next = 12;
+          _context.next = 11;
           return fetch(API, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              chat_id: "-1002189700116",
-              text: dataStrFromSite
+              name: name,
+              phone: phone
             })
           });
-        case 12:
+        case 11:
           response = _context.sent;
           if (!response.ok) {
-            _context.next = 18;
+            _context.next = 17;
             break;
           }
           alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
-          // Чистим форму
           form.reset();
-          _context.next = 19;
+          _context.next = 18;
           break;
+        case 17:
+          throw new Error('Failed to send message');
         case 18:
-          throw new Error(response.statusText);
-        case 19:
-          _context.next = 25;
+          _context.next = 24;
           break;
-        case 21:
-          _context.prev = 21;
-          _context.t0 = _context["catch"](8);
-          console.error();
-          alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кноку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
-        case 25:
-          _context.prev = 25;
+        case 20:
+          _context.prev = 20;
+          _context.t0 = _context["catch"](7);
+          console.error(_context.t0);
+          alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кнопку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
+        case 24:
+          _context.prev = 24;
           formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
-          return _context.finish(25);
-        case 28:
+          return _context.finish(24);
+        case 27:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[8, 21, 25, 28]]);
+    }, _callee, null, [[7, 20, 24, 27]]);
   }));
   return _sendEmailTelegram.apply(this, arguments);
 }
