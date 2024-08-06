@@ -26,6 +26,10 @@ import newer from 'gulp-newer';
 import browserSync from 'browser-sync';
 browserSync.create();
 
+import replace from 'gulp-replace';
+import dotenv from 'dotenv';
+dotenv.config();
+
 // import ttf2woff2 from 'gulp-ttf2woff2';
 import { makeConvert } from './src/lib-ttf-to-woff/font-ttf-woff.js';
 
@@ -157,15 +161,37 @@ function watch() { // Track changes
     gulp.watch(paths.html.dest).on('change', browserSync.reload);
 }
 
+
+
+
+
+
+function convertVarFromNodeToClient() {
+    return gulp.src('src/**/*.js')
+        .pipe(replace('process.env.TELEGRAM_CHAT_ID', JSON.stringify(process.env.TELEGRAM_CHAT_ID)))
+        .pipe(replace('process.env.TELEGRAM_TOKEN', JSON.stringify(process.env.TELEGRAM_TOKEN)))
+        .pipe(gulp.dest('dist'));
+}
+
+
+
+// export const scripts = () => {
+//     return gulp.src('src/**/*.js')
+//         .pipe(replace('process.env.TELEGRAM_CHAT_ID', JSON.stringify(process.env.TELEGRAM_CHAT_ID)))
+//         .pipe(replace('process.env.TELEGRAM_TOKEN', JSON.stringify(process.env.TELEGRAM_TOKEN)))
+//         .pipe(gulp.dest('dist'));
+// };
+
+// export default gulp.task('scripts', scripts);
+
+
 // Export functions as tasks
-export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, watch }; // 
+export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, convertVarFromNodeToClient, watch }; // 
 
 // series() performs tasks in sequence
-const build = gulp.series(clean, fontsTask, ttfToWoff, imgTask, htmTask, gulp.parallel(styles, scripts, imgTask, watch)); //
-// const buildParalel = gulp.parallel(clean, styles); // parallel() performs tasks in parallel
+const build = gulp.series(clean, fontsTask, ttfToWoff, imgTask, htmTask, gulp.parallel(styles, convertVarFromNodeToClient,scripts, imgTask, watch)); //
 
-const production = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask));
+const production = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, convertVarFromNodeToClient, scripts, imgTask));
 
-export {production};
-export { build };
+export { production, build };
 export default build; // Just write in terminal gulp
