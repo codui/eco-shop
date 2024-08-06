@@ -110,8 +110,8 @@ function styles() {
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS()) // minification of CSS files - removal of spaces, extra ";", all paragraphs
         .pipe(rename({
-            basename: 'main'
-            // suffix: '.min'
+            basename: 'main',
+            suffix: '.min'
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(size({
@@ -129,7 +129,7 @@ function scripts() {
             presets: ['@babel/env']
         })) // transpiles javascript code into old standard code javascript, for old browsers
         .pipe(uglify()) // minifies, compresses and optimizes javascript files
-        .pipe(concat('main.min.js')) // combine the files into one and immediately give the name to the combined file
+        .pipe(concat('main.js')) // combine the files into one and immediately give the name to the combined file
         .pipe(sourcemaps.write('.'))
         .pipe(size({
             showFiles: true
@@ -161,7 +161,7 @@ function watch() { // Track changes
 export { clean, fontsTask, ttfToWoff, styles, scripts, imgTask, htmTask, watch }; // 
 
 // series() performs tasks in sequence
-const build = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask, watch)); // 
+const build = gulp.series(clean, fontsTask, ttfToWoff, imgTask, htmTask, gulp.parallel(styles, scripts, imgTask, watch)); //
 // const buildParalel = gulp.parallel(clean, styles); // parallel() performs tasks in parallel
 
 const production = gulp.series(clean, fontsTask, ttfToWoff, htmTask, gulp.parallel(styles, scripts, imgTask));
