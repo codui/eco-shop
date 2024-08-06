@@ -174,6 +174,7 @@ sliderBlock.addEventListener('click', clickHandler);
 // // Name of group with bot - sadovShop
 
 // // API - адрес куда посылаем запрос
+
 const API = `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`;
 
 async function sendEmailTelegram(event) {
