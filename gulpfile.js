@@ -110,8 +110,8 @@ function styles() {
         .pipe(postcss([autoprefixer()]))
         .pipe(cleanCSS()) // minification of CSS files - removal of spaces, extra ";", all paragraphs
         .pipe(rename({
-            basename: 'main',
-            suffix: '.min'
+            basename: 'main'
+            // suffix: '.min'
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(size({
