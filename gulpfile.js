@@ -100,7 +100,7 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(sourcemaps.init())
-        .pipe(babel({ presets: ['@babel/env'] }))
+        // .pipe(babel({ presets: ['@babel/env'] }))
         // Uncomment the next two lines if you want to minify and concatenate scripts
         // .pipe(uglify())
         // .pipe(concat('main.js'))
