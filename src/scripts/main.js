@@ -174,7 +174,7 @@ sliderBlock.addEventListener('click', clickHandler);
 // // Name of group with bot - sadovShop
 
 // // API - адрес куда посылаем запрос
-const API = '/send-message';
+const API = '/api/send-message';
 
 async function sendEmailTelegram(event) {
     event.preventDefault();
@@ -204,12 +204,13 @@ async function sendEmailTelegram(event) {
             throw new Error('Failed to send message');
         }
     } catch (error) {
-        console.log(error);
+        console.error(error);
         alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кнопку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
     } finally {
         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
     }
 }
+
 
 
 
