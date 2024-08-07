@@ -63,25 +63,6 @@ function showTimeToMidnight() {
 
 showTimeToMidnight();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * 
  * 
@@ -105,7 +86,7 @@ function clickHandler(event) {
     function removeActiveClass(acitveElement) {
         acitveElement.classList.remove('slider-dots__item_active');
     }
-
+    
     removeActiveClass(dotActiveNowElement);
     // Processing click on left arrow
     if (event.target.classList.contains('slider__arrows_left')) {
@@ -132,47 +113,13 @@ function clickHandler(event) {
 
 sliderBlock.addEventListener('click', clickHandler);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * 
  * 
  * - - - TELEGRAM BOT - - -
  * 
  */
-// import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from "./telegbot-tok.js";
-
-// // Bot name - order processing
-// // Username for bot - sadovShopBot
-// // Name of group with bot - sadovShop
-
-// // API - адрес куда посылаем запрос
+// API - address where we send the request
 const API = '/api/send-message';
 
 async function sendEmailTelegram(event) {
