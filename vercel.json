@@ -1,17 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/**/*",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
-    { "src": "/send-message", "dest": "/api/send-message" },
+    { "src": "/api/send-message", "dest": "/api/send-message.js" },
     { "src": "/(.*)", "dest": "/dist/$1" }
   ]
 }

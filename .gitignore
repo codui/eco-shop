@@ -11,3 +11,4 @@ README.md
 /dist/lib-ttf-to-woff/
 package_old.json
 old_gulpfile.js
+.vercel
