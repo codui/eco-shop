@@ -58,7 +58,6 @@ function showTimeToMidnight() {
     for (let item of secondsCellArray) {
         item.textContent = getSecondsToMidnight();
     }
-    // console.log(`${getHoursToMidnight()}:${getMinutesToMidnight()}:${getSecondsToMidnight()}`);
     setTimeout(showTimeToMidnight, 200);
 }
 
@@ -185,7 +184,6 @@ async function sendEmailTelegram(event) {
     const fromDataObject = Object.fromEntries(formData.entries());
 
     const { name, phone } = fromDataObject;
-    console.log(`Ім'я покупця: ${name}\nНомер телефона: ${phone}`);
 
     try {
         formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...';
@@ -210,84 +208,3 @@ async function sendEmailTelegram(event) {
         formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * 
- * 
- * - - - FORM VALIDATION - - -
- * 
- * 
- */
-// let form = document.getElementById('form-order');
-
-
-// function validation(form) {
-//     let result = true;
-//     const arrInputs = form.querySelectorAll('input'); // array of input tags
-
-
-//     function removeError(input) {
-//         const parentOfInput = input.parentNode;
-//         if (parentOfInput.classList.contains('error')) {
-//             parentOfInput.querySelector('.error-label').remove();
-//             parentOfInput.classList.remove('error');
-//         }
-//     }
-    
-
-//     function createError(input, text) {
-//         const parentOfInput = input.parentNode;
-//         const errorLabel = document.createElement('label');
-//         errorLabel.classList.add('error-label');
-//         errorLabel.textContent = text + input.placeholder[0].toLowerCase() + input.placeholder.slice(1);
-        
-//         parentOfInput.classList.add('error');
-//         parentOfInput.append(errorLabel);
-//     }
-
-//     arrInputs.forEach( input => {
-//         removeError(input);
-
-//         if (input.value === '') {
-//             createError(input, 'Будь-ласка, ');
-//             result = false;
-//         }
-//     })
-
-//     return result;
-// }
-
-// function handlerForm(event) {
-//     event.preventDefault();
-//     // validation(this) // "this" - это тег form, форма которую мы обрабатываем
-//     alert('The form has been validated in HTML.')
-
-//     // if (validation(this) === true) {
-//     //     // Скорее всего в этом блоке нужно будет передавать данные в Телеграм
-//     //     alert('The form has been validated.');
-//     // }
-// }
-
-// form.addEventListener('submit', handlerForm);
-
