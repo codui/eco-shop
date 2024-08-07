@@ -101,9 +101,8 @@ function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(sourcemaps.init())
         // .pipe(babel({ presets: ['@babel/env'] }))
-        // Uncomment the next two lines if you want to minify and concatenate scripts
-        // .pipe(uglify())
-        // .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(concat('main.min.js'))
         .pipe(replace('process.env.TELEGRAM_CHAT_ID', JSON.stringify(process.env.TELEGRAM_CHAT_ID)))
         .pipe(replace('process.env.TELEGRAM_TOKEN', JSON.stringify(process.env.TELEGRAM_TOKEN)))
         .pipe(sourcemaps.write('.'))
@@ -117,7 +116,7 @@ function watch() {
         server: {
             baseDir: "./dist",
         },
-        // open: false // Uncomment this line when deploying on Vercel!
+        // open: false // Uncomment this line if need shootdown server
     });
     gulp.watch(paths.html.src, htmTask);
     gulp.watch(paths.styles.src, styles);
