@@ -100,7 +100,7 @@ function styles() {
 function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(sourcemaps.init())
-        // .pipe(babel({ presets: ['@babel/env'] }))
+        .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(uglify())
         .pipe(concat('main.min.js'))
         .pipe(replace('process.env.TELEGRAM_CHAT_ID', JSON.stringify(process.env.TELEGRAM_CHAT_ID)))
