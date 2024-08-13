@@ -146,44 +146,40 @@ launchSlider();
  * - - - TELEGRAM BOT - - -
  * 
  */
-function launchTelegramBot() {
-    // API - address where we send the request
-    const API = '/api/send-message';
 
-    async function sendEmailTelegram(event) {
-        event.preventDefault();
+// API - address where we send the request
+const API = '/api/send-message';
 
-        const form = event.target;
-        const formBtn = document.querySelector('#form-order #order-button');
-        const formData = new FormData(form);
-        const fromDataObject = Object.fromEntries(formData.entries());
+async function sendEmailTelegram(event) {
+    event.preventDefault();
 
-        const { name, phone } = fromDataObject;
+    const form = event.target;
+    const formBtn = document.querySelector('#form-order #order-button');
+    const formData = new FormData(form);
+    const fromDataObject = Object.fromEntries(formData.entries());
 
-        try {
-            formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...';
-            const response = await fetch(API, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, phone })
-            });
+    const { name, phone } = fromDataObject;
 
-            if (response.ok) {
-                alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
-                form.reset();
-            } else {
-                throw new Error('Failed to send message');
-            }
-        } catch (error) {
-            console.error(error);
-            alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кнопку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
-        } finally {
-            formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
+    try {
+        formBtn.textContent = 'Не закривайте цю сторінку, доки надсилаються дані...';
+        const response = await fetch(API, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, phone })
+        });
+
+        if (response.ok) {
+            alert('Дякуємо! Ваше замовлення прийнято. Ми зв`яжемось з Вами найближчим часом.');
+            form.reset();
+        } else {
+            throw new Error('Failed to send message');
         }
+    } catch (error) {
+        console.error(error);
+        alert('Нажаль ми не отримали Ваші дані. Будь-ласка, знову введіть Ваші дані та натисність на кнопку "ОФОРМИТИ ЗАМОВЛЕННЯ".');
+    } finally {
+        formBtn.textContent = 'ОФОРМИТИ ЗАМОВЛЕННЯ';
     }
 }
-
-
-launchTelegramBot();
