@@ -1,5 +1,7 @@
 # Сайт-лендінг "Капсули для пральної машини"
-<a target="_blank" href="">[eco-shop-now.vercel.app/](https://eco-shop-now.vercel.app/)</a>
+# https://eco-shop-now.vercel.app/
+<a target="_blank" href="">https://eco-shop-now.vercel.app/</a>
+[eco-shop-now.vercel.app/](https://eco-shop-now.vercel.app/)
 
 ## How to use:
 1. Download all files to any directory
