@@ -4,7 +4,6 @@ package-lock.json
 *.odt#
 *.ods
 *.ods#
-README.md
 /info-about-project
 /src/scripts/ltelegbot-tok.js
 .env
