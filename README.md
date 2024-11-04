@@ -1,5 +1,5 @@
-# Лендінг капсули для пральної машини
-## Site https://eco-shop-now.vercel.app/
+# Сайт-лендінг "Капсули для пральної машини"
+# https://eco-shop-now.vercel.app/
 
 ## Directory structure for placing style files and scripts:
 >./src/fonts/font-for-git.ttf
