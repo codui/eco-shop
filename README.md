@@ -1,4 +1,4 @@
-# Сайт-лендінг "Капсули для пральної машини" https://eco-shop-now.vercel.app/
+# Site-landing "Капсули для пральної машини" https://eco-shop-now.vercel.app/
 
 ## How it works:
 1. The project works together with the Telegram bot.
