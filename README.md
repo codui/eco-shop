@@ -1,7 +1,6 @@
 # Сайт-лендінг "Капсули для пральної машини" https://eco-shop-now.vercel.app/
 
 ## How to use:
-1. Download all files to any directory
-2. Enter the command 'npm i' in the terminal (node.js must be installed)
-3. Run the 'gulp' command in the terminal (run the default task)
-4. Work in a project with customized automation of necessary tasks
+1. The project works together with the Telegram bot.
+2. When ordering a product, the Telegram bot receives the customer's data - name and phone number for communication.
+3. Next, the Telegram bot publishes the customer's data in the Telegram group.
